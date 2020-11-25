@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessObjects\Certificate.cs" />
+    <Compile Include="BusinessObjects\CertificateItem.cs" />
+    <Compile Include="BusinessObjects\Student.cs" />
+    <Compile Include="BusinessObjects\StudentSubjectMark.cs" />
+    <Compile Include="BusinessObjects\Subject.cs" />
     <Compile Include="MethodExtraction\Example\Person.cs" />
     <Compile Include="MethodExtraction\Example\PersonService.cs" />
     <Compile Include="MethodExtraction\Exercise\FileService.cs" />
