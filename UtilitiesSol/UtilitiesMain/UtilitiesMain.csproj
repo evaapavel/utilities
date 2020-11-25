@@ -47,7 +47,6 @@
     <Compile Include="BusinessObjects\Student.cs" />
     <Compile Include="BusinessObjects\StudentSubjectMark.cs" />
     <Compile Include="BusinessObjects\Subject.cs" />
-    <Compile Include="DataClasses\Person.cs" />
     <Compile Include="MethodExtraction\Example\Person.cs" />
     <Compile Include="MethodExtraction\Example\PersonService.cs" />
     <Compile Include="MethodExtraction\Exercise\FileService.cs" />
@@ -57,6 +56,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DataClasses\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
