@@ -33,6 +33,8 @@ namespace UtilitiesMain
             FileService fileService = new FileService();
             fileService.MergeFiles(pathToFileA, pathToFileB, pathToFileC, pathToFileD);
 
+            // Ahoj
+
         }
     }
 }
