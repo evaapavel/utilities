@@ -41,11 +41,66 @@ namespace UtilitiesMain
 
         static void ShowDataClasses()
         {
+
+            // Persons
             Person pavel = new Person("Pavel", "Novák", new DateTime(1992, 9, 26), true);
             Person jana = new Person("Jana", "Výborná", new DateTime(1987, 2, 4), false);
             Console.WriteLine($"Jméno: {pavel.firstName}, Příjmení: {pavel.lastName}, Datum narození: {pavel.dateOfBirth}, Občan ČR: {pavel.isCitizenCZ}");
             Console.WriteLine($"Jméno: {jana.firstName}, Příjmení: {jana.lastName}, Datum narození: {jana.dateOfBirth}, Občan ČR: {jana.isCitizenCZ}");
+
+            // Publishers
+            //Albatros, založeno 1949, IČO: 28377141
+            //Academia, založeno 1953, IČO: 60457856
+            //Garamond, založeno 1997, IČO: 25126202
+
+            Publisher albatros = new Publisher("Albatros", 1949, 28377141);
+            Publisher academia = new Publisher("Academia", 1953, 60457856);
+            Publisher garamond = new Publisher("Garamond", 1997, 25126202);
+
+            Console.WriteLine($"Název: {albatros.name}  Založeno: {albatros.since}  IČO: {albatros.ico}  ");
+            Console.WriteLine($"Název: {academia.name}  Založeno: {academia.since}  IČO: {academia.ico}  ");
+            Console.WriteLine($"Název: {garamond.name}  Založeno: {garamond.since}  IČO: {garamond.ico}  ");
+
+
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            // Books
+            Person padevet = new Person("Jiří", "Padevět", new DateTime(1966, 7, 20), true);
+            Person tesson = new Person("Sylvain", "Tesson", new DateTime(1972, 4, 26), false);
+
+
+            //Průvodce protektorátní Prahou, 2013, (Jiří Padevět, nar. 20.července 1966, občan ČR), (Academia, zal. 1953, IČO: 60457856) 
+            Book pruvodce = new Book();
+            pruvodce.title = "Průvodce protektorátní Prahou";
+            pruvodce.publishedIn = 2013;
+            pruvodce.author = padevet;
+            pruvodce.publisher = academia;
+
+            //Sněžný levhart, 2020, (Sylvain Tesson, nar. 26.dubna 1972, není občan ČR), (Garamond, zal. 1997, IČO: 25126202)
+            Book levhart = new Book();
+            levhart.title = "Sněžný levhart";
+            levhart.publishedIn = 2020;
+            levhart.author = tesson;
+            levhart.publisher = garamond;
+
+            DisplayBook(pruvodce);
+            Console.WriteLine();
+            DisplayBook(levhart);
+
             Console.ReadKey(true);
+        }
+
+
+        static void DisplayBook(Book book)
+        {
+            Console.Write($"Název: {book.title}   ");
+            Console.Write($"Vydáno: {book.publishedIn}   ");
+            Console.WriteLine("Autor:");
+            Console.WriteLine($"Jméno: {book.author.firstName}, Příjmení: {book.author.lastName}, Datum narození: {book.author.dateOfBirth}, Občan ČR: {book.author.isCitizenCZ}");
+            Console.WriteLine("Nakladatelství:");
+            Console.WriteLine($"Název: {book.publisher.name}  Založeno: {book.publisher.since}  IČO: {book.publisher.ico}  ");
         }
 
     }
