@@ -69,7 +69,9 @@ namespace UtilitiesMain
             Console.WriteLine();
 
             // Books
+            //Jiří Padevět, nar. 20. července 1966, občan ČR
             Person padevet = new Person("Jiří", "Padevět", new DateTime(1966, 7, 20), true);
+            //Sylvain Tesson, nar. 26. dubna 1972, není občan ČR
             Person tesson = new Person("Sylvain", "Tesson", new DateTime(1972, 4, 26), false);
             Person rowlingova = new Person("J. K.", "Rowlingová", new DateTime(1965, 7, 31), false);
             Person macourek = new Person("Miloš", "Macourek", new DateTime(1926, 12, 2), true);
