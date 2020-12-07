@@ -104,8 +104,26 @@ namespace UtilitiesMain
             machASebestova.publisher = albatros;
 
             DisplayBook(pruvodce);
-            Console.WriteLine();
+            //Console.WriteLine();
             DisplayBook(levhart);
+            //Console.WriteLine();
+            DisplayBook(ikabog);
+            //Console.WriteLine();
+            DisplayBook(machASebestova);
+
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+
+            // EBookshop
+            EBookshop eBookshop = new EBookshop("https://www.mojeskveleknihy.cz");
+            eBookshop.books.Add(pruvodce);
+            eBookshop.books.Add(levhart);
+            eBookshop.books.Add(ikabog);
+            eBookshop.books.Add(machASebestova);
+            
+            DisplayEBookshop(eBookshop);
 
             Console.ReadKey(true);
         }
@@ -119,6 +137,23 @@ namespace UtilitiesMain
             Console.WriteLine($"Jméno: {book.author.firstName}, Příjmení: {book.author.lastName}, Datum narození: {book.author.dateOfBirth}, Občan ČR: {book.author.isCitizenCZ}");
             Console.WriteLine("Nakladatelství:");
             Console.WriteLine($"Název: {book.publisher.name}  Založeno: {book.publisher.since}  IČO: {book.publisher.ico}  ");
+
+            Console.WriteLine();
+        }
+
+
+        static void DisplayEBookshop(EBookshop eBookshop)
+        {
+            Console.WriteLine(eBookshop.url);
+            Console.WriteLine("Knihy, které nabízíme:");
+
+            //Console.WriteLine(eBookshop.books[0].author.lastName);
+            for (int i = 0; i < eBookshop.books.Count; i++)
+            {
+                DisplayBook(eBookshop.books[i]);
+            }
+
+            Console.WriteLine();
         }
 
     }

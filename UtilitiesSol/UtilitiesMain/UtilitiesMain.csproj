@@ -48,6 +48,7 @@
     <Compile Include="BusinessObjects\StudentSubjectMark.cs" />
     <Compile Include="BusinessObjects\Subject.cs" />
     <Compile Include="DataClasses\Book.cs" />
+    <Compile Include="DataClasses\EBookshop.cs" />
     <Compile Include="DataClasses\Person.cs" />
     <Compile Include="DataClasses\Publisher.cs" />
     <Compile Include="MethodExtraction\Example\Person.cs" />
