@@ -71,6 +71,8 @@ namespace UtilitiesMain
             // Books
             Person padevet = new Person("Jiří", "Padevět", new DateTime(1966, 7, 20), true);
             Person tesson = new Person("Sylvain", "Tesson", new DateTime(1972, 4, 26), false);
+            Person rowlingova = new Person("J. K.", "Rowlingová", new DateTime(1965, 7, 31), false);
+            Person macourek = new Person("Miloš", "Macourek", new DateTime(1926, 12, 2), true);
 
 
             //Průvodce protektorátní Prahou, 2013, (Jiří Padevět, nar. 20.července 1966, občan ČR), (Academia, zal. 1953, IČO: 60457856) 
@@ -86,6 +88,20 @@ namespace UtilitiesMain
             levhart.publishedIn = 2020;
             levhart.author = tesson;
             levhart.publisher = garamond;
+
+            //Ikabog, 2020, (J. K. Rowlingová, nar. 31. července 1965, není občankou ČR), (Albatros, zal. 1949, IČO: 28377141)
+            Book ikabog = new Book();
+            ikabog.title = "Ikabog";
+            ikabog.publishedIn = 2020;
+            ikabog.author = rowlingova;
+            ikabog.publisher = albatros;
+
+            //Mach a Šebestová v historii, 2009, (Miloš Macourek, nar. 2. prosince 1926, občan ČR), (Albatros, zal. 1949, IČO: 28377141)
+            Book machASebestova = new Book();
+            machASebestova.title = "Mach a Šebestová v historii";
+            machASebestova.publishedIn = 2009;
+            machASebestova.author = macourek;
+            machASebestova.publisher = albatros;
 
             DisplayBook(pruvodce);
             Console.WriteLine();
