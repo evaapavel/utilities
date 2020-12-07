@@ -10,7 +10,10 @@ namespace UtilitiesMain.DataClasses
         public DateTime dateOfBirth;
         public bool isCitizenCZ;
 
-        public Person(string firstName, string lastName, DateTime dateOfBirth, bool isCitizenCZ)
+        public Person(
+            string firstName, string lastName,
+            DateTime dateOfBirth, bool isCitizenCZ
+        )
         {
             this.firstName = firstName;
             this.lastName = lastName;
