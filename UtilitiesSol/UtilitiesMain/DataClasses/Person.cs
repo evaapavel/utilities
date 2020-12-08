@@ -5,10 +5,10 @@ namespace UtilitiesMain.DataClasses
     public class Person
     {
 
-        public string firstName;
-        public string lastName;
-        public DateTime dateOfBirth;
-        public bool isCitizenCZ;
+        private string firstName;
+        private string lastName;
+        private DateTime dateOfBirth;
+        private bool isCitizenCZ;
 
         public Person(
             string firstName, string lastName,

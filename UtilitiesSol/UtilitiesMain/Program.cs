@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+
 //using UtilitiesMain.MethodExtraction.Example;
 //using UtilitiesMain.MethodExtraction.Exercise;
 using UtilitiesMain.DataClasses;
@@ -35,10 +37,65 @@ namespace UtilitiesMain
             //fileService.MergeFiles(pathToFileA, pathToFileB, pathToFileC, pathToFileD);
 
 
-            ShowDataClasses();
+            //ShowDataClasses();
+
+            ShowVariablesAndProperties();
 			
 			// Ahoj Olgo!
 
+        }
+
+        static void ShowVariablesAndProperties()
+        {
+
+            // Persons
+            Person milada = new Person("Milada", "Horáková", new DateTime(1901, 12, 25), true);
+            Console.WriteLine($"Jméno: {milada.firstName}, Příjmení: {milada.lastName}, Datum narození: {milada.dateOfBirth.ToString("d.MM.yyyy")}, Občan ČR: {milada.isCitizenCZ}");
+            Console.WriteLine();
+
+            milada.firstName = "Horáková";
+            milada.lastName = "Milada";
+            Console.WriteLine($"Jméno: {milada.firstName}, Příjmení: {milada.lastName}, Datum narození: {milada.dateOfBirth.ToString("d.MM.yyyy")}, Občan ČR: {milada.isCitizenCZ}");
+            Console.WriteLine();
+            Console.WriteLine();
+
+
+            // Books
+            Person stendhal = new Person("Marie-Henri", "Beyle", new DateTime(1783, 1, 23), false);
+            Publisher odeon = new Publisher("Odeon", 1966, 49709895);
+            Book kartouza = new Book("Kartouza parmská", 1974, stendhal, odeon);
+            DisplayBook(kartouza);
+            Console.WriteLine();
+            Console.WriteLine();
+
+            kartouza.publishedIn = 1927;
+            DisplayBook(kartouza);
+            Console.WriteLine();
+            Console.WriteLine();
+
+            // e-Bookshop
+            Person padevet = new Person("Jiří", "Padevět", new DateTime(1966, 7, 20), true);
+            Person tesson = new Person("Sylvain", "Tesson", new DateTime(1972, 4, 26), false);
+            Publisher academia = new Publisher("Academia", 1953, 60457856);
+            Publisher garamond = new Publisher("Garamond", 1997, 25126202);
+            Book pruvodce = new Book("Průvodce protektorátní Prahou", 2013, padevet, academia);
+            Book levhart = new Book("Sněžný levhart", 2020, tesson, garamond);
+
+            EBookshop moje = new EBookshop("https://www.mojeskveleknihy.cz");
+            moje.books.Add(pruvodce);
+            moje.books.Add(levhart);
+            DisplayEBookshop(moje);
+            Console.WriteLine();
+            Console.WriteLine();
+
+            moje.books = null;
+            // ....
+            //moje.books = new List<Book>();
+            // Následující řádek způsobí vyhození výjimky NullRefenceException
+            moje.books.Add(kartouza);
+
+
+            Console.ReadKey(true);
         }
 
         static void ShowDataClasses()
@@ -134,7 +191,7 @@ namespace UtilitiesMain
         static void DisplayBook(Book book)
         {
             Console.Write($"Název: {book.title}   ");
-            Console.Write($"Vydáno: {book.publishedIn}   ");
+            Console.WriteLine($"Vydáno: {book.publishedIn}   ");
             Console.WriteLine("Autor:");
             Console.WriteLine($"Jméno: {book.author.firstName}, Příjmení: {book.author.lastName}, Datum narození: {book.author.dateOfBirth}, Občan ČR: {book.author.isCitizenCZ}");
             Console.WriteLine("Nakladatelství:");
@@ -146,8 +203,11 @@ namespace UtilitiesMain
 
         static void DisplayEBookshop(EBookshop eBookshop)
         {
+            Console.WriteLine();
             Console.WriteLine(eBookshop.url);
+            Console.WriteLine();
             Console.WriteLine("Knihy, které nabízíme:");
+            Console.WriteLine();
 
             //Console.WriteLine(eBookshop.books[0].author.lastName);
             for (int i = 0; i < eBookshop.books.Count; i++)
