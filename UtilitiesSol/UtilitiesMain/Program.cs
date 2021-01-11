@@ -69,81 +69,98 @@ namespace UtilitiesMain
             //StringBuilder personName = new StringBuilder("John");
             //Person john = new Person(personName, 35);
             //Person mary = new Person(personName, 22);
-            //mary.firstName = mary.firstName.Replace("John", "Mary");
+            ////mary.firstName = mary.firstName.Replace("John", "Mary");
+            //mary.firstName.Replace("John", "Mary");
             //Console.WriteLine($"Jméno: {john.firstName}  Věk: {john.age}");
             //Console.WriteLine($"Jméno: {mary.firstName}  Věk: {mary.age}");
 
-            EncryptMessage();
+            //EncryptMessage();
+
+            //TestGenericList();
+
+            ShowVariablesAndProperties();
 
         }
 
-        public class Person
-        {
-            //public string firstName;
-            public StringBuilder firstName;
-            public int age;
-
-            //public Person(string firstName, int age)
-            public Person(StringBuilder firstName, int age)
-            {
-                this.firstName = firstName;
-                this.age = age;
-            }
-        }
-
-
-        //static void ShowVariablesAndProperties()
+        //public class Person
         //{
+        //    //public string firstName;
+        //    public StringBuilder firstName;
+        //    public int age;
 
-        //    // Persons
-        //    Person milada = new Person("Milada", "Horáková", new DateTime(1901, 12, 25), true);
-        //    Console.WriteLine($"Jméno: {milada.firstName}, Příjmení: {milada.lastName}, Datum narození: {milada.dateOfBirth.ToString("d.MM.yyyy")}, Občan ČR: {milada.isCitizenCZ}");
-        //    Console.WriteLine();
-
-        //    milada.firstName = "Horáková";
-        //    milada.lastName = "Milada";
-        //    Console.WriteLine($"Jméno: {milada.firstName}, Příjmení: {milada.lastName}, Datum narození: {milada.dateOfBirth.ToString("d.MM.yyyy")}, Občan ČR: {milada.isCitizenCZ}");
-        //    Console.WriteLine();
-        //    Console.WriteLine();
-
-
-        //    // Books
-        //    Person stendhal = new Person("Marie-Henri", "Beyle", new DateTime(1783, 1, 23), false);
-        //    Publisher odeon = new Publisher("Odeon", 1966, 49709895);
-        //    Book kartouza = new Book("Kartouza parmská", 1974, stendhal, odeon);
-        //    DisplayBook(kartouza);
-        //    Console.WriteLine();
-        //    Console.WriteLine();
-
-        //    kartouza.publishedIn = 1927;
-        //    DisplayBook(kartouza);
-        //    Console.WriteLine();
-        //    Console.WriteLine();
-
-        //    // e-Bookshop
-        //    Person padevet = new Person("Jiří", "Padevět", new DateTime(1966, 7, 20), true);
-        //    Person tesson = new Person("Sylvain", "Tesson", new DateTime(1972, 4, 26), false);
-        //    Publisher academia = new Publisher("Academia", 1953, 60457856);
-        //    Publisher garamond = new Publisher("Garamond", 1997, 25126202);
-        //    Book pruvodce = new Book("Průvodce protektorátní Prahou", 2013, padevet, academia);
-        //    Book levhart = new Book("Sněžný levhart", 2020, tesson, garamond);
-
-        //    EBookshop moje = new EBookshop("https://www.mojeskveleknihy.cz");
-        //    moje.books.Add(pruvodce);
-        //    moje.books.Add(levhart);
-        //    DisplayEBookshop(moje);
-        //    Console.WriteLine();
-        //    Console.WriteLine();
-
-        //    moje.books = null;
-        //    // ....
-        //    //moje.books = new List<Book>();
-        //    // Následující řádek způsobí vyhození výjimky NullRefenceException
-        //    moje.books.Add(kartouza);
-
-
-        //    Console.ReadKey(true);
+        //    //public Person(string firstName, int age)
+        //    public Person(StringBuilder firstName, int age)
+        //    {
+        //        this.firstName = firstName;
+        //        this.age = age;
+        //    }
         //}
+
+
+        static void ShowVariablesAndProperties()
+        {
+
+            // Persons
+            Person milada = new Person("Milada", "Horáková", new DateTime(1901, 12, 25), true);
+            //Console.WriteLine($"Jméno: {milada.firstName}, Příjmení: {milada.lastName}, Datum narození: {milada.dateOfBirth.ToString("d.MM.yyyy")}, Občan ČR: {milada.isCitizenCZ}");
+            //Console.WriteLine($"Jméno: {milada.GetFirstName()}, Příjmení: {milada.GetLastName()}, Datum narození: {milada.GetDateOfBirth().ToString("d.MM.yyyy")}, Občan ČR: {milada.GetIsCitizenCZ()}");
+            Console.WriteLine($"Jméno: {milada.FirstName}, Příjmení: {milada.LastName}, Datum narození: {milada.DateOfBirth.ToString("d.MM.yyyy")}, Občan ČR: {milada.IsCitizenCZ}");
+            Console.WriteLine();
+
+            //milada.firstName = "Horáková";
+            ////milada.SetFirstName("Horáková");
+            //milada.lastName = "Milada";
+            //Console.WriteLine($"Jméno: {milada.firstName}, Příjmení: {milada.lastName}, Datum narození: {milada.dateOfBirth.ToString("d.MM.yyyy")}, Občan ČR: {milada.isCitizenCZ}");
+            //Console.WriteLine();
+            //Console.WriteLine();
+
+
+            // Books
+            Person stendhal = new Person("Marie-Henri", "Beyle", new DateTime(1783, 1, 23), false);
+            Publisher odeon = new Publisher("Odeon", 1966, 49709895);
+            Book kartouza = new Book("Kartouza parmská", 1974, stendhal, odeon);
+            DisplayBook(kartouza);
+            Console.WriteLine();
+            Console.WriteLine();
+
+            //kartouza.publishedIn = 1927;
+            //kartouza.SetPublishedIn(1927);
+            //kartouza.PublishedIn = 1970;
+            kartouza.PublishedIn = 1927;
+            DisplayBook(kartouza);
+            Console.WriteLine();
+            Console.WriteLine();
+
+            // e-Bookshop
+            Person padevet = new Person("Jiří", "Padevět", new DateTime(1966, 7, 20), true);
+            Person tesson = new Person("Sylvain", "Tesson", new DateTime(1972, 4, 26), false);
+            Publisher academia = new Publisher("Academia", 1953, 60457856);
+            Publisher garamond = new Publisher("Garamond", 1997, 25126202);
+            Book pruvodce = new Book("Průvodce protektorátní Prahou", 2013, padevet, academia);
+            Book levhart = new Book("Sněžný levhart", 2020, tesson, garamond);
+
+            EBookshop moje = new EBookshop("https://www.mojeskveleknihy.cz");
+            //moje.books.Add(pruvodce);
+            //moje.books.Add(levhart);
+            //moje.GetBooks().Add(pruvodce);
+            //moje.GetBooks().Add(levhart);
+            moje.Books.Add(pruvodce);
+            moje.Books.Add(levhart);
+            DisplayEBookshop(moje);
+            Console.WriteLine();
+            Console.WriteLine();
+
+            //moje.books = null;
+            // ....
+            //moje.books = new List<Book>();
+            // Následující řádek způsobí vyhození výjimky NullRefenceException
+            //moje.books.Add(kartouza);
+            //moje.GetBooks().Add(kartouza);
+            moje.Books.Add(kartouza);
+
+
+            Console.ReadKey(true);
+        }
 
         //static void ShowDataClasses()
         //{
@@ -235,36 +252,70 @@ namespace UtilitiesMain
         //}
 
 
-        //static void DisplayBook(Book book)
-        //{
-        //    Console.Write($"Název: {book.title}   ");
-        //    Console.WriteLine($"Vydáno: {book.publishedIn}   ");
-        //    Console.WriteLine("Autor:");
-        //    //Console.WriteLine($"Jméno: {book.author.firstName}, Příjmení: {book.author.lastName}, Datum narození: {book.author.dateOfBirth}, Občan ČR: {book.author.isCitizenCZ}");
-        //    Console.WriteLine($"Jméno: {book.author.firstName}, Příjmení: {book.author.lastName}, Datum narození: {book.author.dateOfBirth.ToString("d.M.yyyy")}, Občan ČR: {book.author.isCitizenCZ}");
-        //    Console.WriteLine("Nakladatelství:");
-        //    Console.WriteLine($"Název: {book.publisher.name}  Založeno: {book.publisher.since}  IČO: {book.publisher.ico}  ");
+        static void DisplayBook(Book book)
+        {
+            //Console.Write($"Název: {book.title}   ");
+            //Console.WriteLine($"Vydáno: {book.publishedIn}   ");
+            //Console.WriteLine("Autor:");
+            //Console.WriteLine($"Jméno: {book.author.firstName}, Příjmení: {book.author.lastName}, Datum narození: {book.author.dateOfBirth.ToString("d.M.yyyy")}, Občan ČR: {book.author.isCitizenCZ}");
+            //Console.WriteLine("Nakladatelství:");
+            //Console.WriteLine($"Název: {book.publisher.name}  Založeno: {book.publisher.since}  IČO: {book.publisher.ico}  ");
 
-        //    Console.WriteLine();
-        //}
+            //Console.Write($"Název: {book.GetTitle()}   ");
+            //Console.WriteLine($"Vydáno: {book.GetPublishedIn()}   ");
+            //Console.WriteLine("Autor:");
+            //Console.WriteLine($"Jméno: {book.GetAuthor().GetFirstName()}, Příjmení: {book.GetAuthor().GetLastName()}, Datum narození: {book.GetAuthor().GetDateOfBirth().ToString("d.M.yyyy")}, Občan ČR: {book.GetAuthor().GetIsCitizenCZ()}");
+            //Console.WriteLine("Nakladatelství:");
+            //Console.WriteLine($"Název: {book.GetPublisher().GetName()}  Založeno: {book.GetPublisher().GetSince()}  IČO: {book.GetPublisher().GetIco()}  ");
+
+            Console.Write($"Název: {book.Title}   ");
+            Console.WriteLine($"Vydáno: {book.PublishedIn}   ");
+            Console.WriteLine("Autor:");
+            Console.WriteLine($"Jméno: {book.Author.FirstName}, Příjmení: {book.Author.LastName}, Datum narození: {book.Author.DateOfBirth.ToString("d.M.yyyy")}, Občan ČR: {book.Author.IsCitizenCZ}");
+            Console.WriteLine("Nakladatelství:");
+            Console.WriteLine($"Název: {book.Publisher.Name}  Založeno: {book.Publisher.Since}  IČO: {book.Publisher.Ico}  ");
+
+            Console.WriteLine();
+        }
 
 
-        //static void DisplayEBookshop(EBookshop eBookshop)
-        //{
-        //    Console.WriteLine();
-        //    Console.WriteLine(eBookshop.url);
-        //    Console.WriteLine();
-        //    Console.WriteLine("Knihy, které nabízíme:");
-        //    Console.WriteLine();
+        static void DisplayEBookshop(EBookshop eBookshop)
+        {
+            //Console.WriteLine();
+            //Console.WriteLine(eBookshop.url);
+            //Console.WriteLine();
+            //Console.WriteLine("Knihy, které nabízíme:");
+            //Console.WriteLine();
 
-        //    //Console.WriteLine(eBookshop.books[0].author.lastName);
-        //    for (int i = 0; i < eBookshop.books.Count; i++)
-        //    {
-        //        DisplayBook(eBookshop.books[i]);
-        //    }
+            //for (int i = 0; i < eBookshop.books.Count; i++)
+            //{
+            //    DisplayBook(eBookshop.books[i]);
+            //}
 
-        //    Console.WriteLine();
-        //}
+            //Console.WriteLine();
+            //Console.WriteLine(eBookshop.GetUrl());
+            //Console.WriteLine();
+            //Console.WriteLine("Knihy, které nabízíme:");
+            //Console.WriteLine();
+
+            //for (int i = 0; i < eBookshop.GetBooks().Count; i++)
+            //{
+            //    DisplayBook(eBookshop.GetBooks()[i]);
+            //}
+
+            Console.WriteLine();
+            Console.WriteLine(eBookshop.Url);
+            Console.WriteLine();
+            Console.WriteLine("Knihy, které nabízíme:");
+            Console.WriteLine();
+
+            for (int i = 0; i < eBookshop.Books.Count; i++)
+            {
+                DisplayBook(eBookshop.Books[i]);
+            }
+
+            Console.WriteLine();
+        }
 
 
         static void EncryptMessage()
@@ -299,6 +350,67 @@ namespace UtilitiesMain
 
             Console.WriteLine(output);
         }
+
+        static void TestGenericList()
+        {
+            List<int> inputList = new List<int>();
+            inputList.Add(10);
+            inputList.Add(3);
+            inputList.Add(-10);
+            inputList.Add(8);
+            inputList.Add(27);
+            inputList.Add(9);
+            inputList.Add(8);
+            inputList.Add(7);
+            inputList.Add(4);
+            inputList.Add(5);
+            inputList.Add(-2);
+            inputList.Add(12);
+            inputList.Add(2);
+            inputList.Add(4);
+            inputList.Add(-7);
+            inputList.Add(0);
+            inputList.Add(1);
+            inputList.Add(2);
+            for (int i = 0; i < inputList.Count; i++)
+            {
+                Console.WriteLine(inputList[i]);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            //List<int> inputList = new List<int>();
+            inputList = new List<int>();
+            inputList.Add(10);
+            inputList.Add(-2);
+            inputList.Add(12);
+            inputList.Add(3);
+            inputList.Add(4);
+            inputList.Add(3);
+            inputList.Add(10);
+            inputList.Add(9);
+            inputList.Add(8);
+            inputList.Add(7);
+            inputList.Add(4);
+            inputList.Add(2);
+            inputList.Add(0);
+            inputList.Add(0);
+            inputList.Add(5);
+            inputList.Add(27);
+            inputList.Add(1);
+            inputList.Add(2);
+            for (int i = 0; i < inputList.Count; i++)
+            {
+                Console.WriteLine(inputList[i]);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.ReadKey(true);
+        }
+
 
     }
 }
