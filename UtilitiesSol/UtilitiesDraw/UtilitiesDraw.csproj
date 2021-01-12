@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessObjects\HouseBuilding\Address.cs" />
+    <Compile Include="BusinessObjects\HouseBuilding\BlockOfFlats.cs" />
+    <Compile Include="BusinessObjects\HouseBuilding\Door.cs" />
+    <Compile Include="BusinessObjects\HouseBuilding\Flat.cs" />
+    <Compile Include="BusinessObjects\HouseBuilding\Floor.cs" />
+    <Compile Include="BusinessObjects\HouseBuilding\OneWindowFlat.cs" />
+    <Compile Include="BusinessObjects\HouseBuilding\TwoWindowFlat.cs" />
+    <Compile Include="BusinessObjects\HouseBuilding\Window.cs" />
     <Compile Include="CanvasForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,8 +88,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BusinessObjects\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
