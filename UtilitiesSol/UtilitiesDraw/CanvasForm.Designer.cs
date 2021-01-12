@@ -28,21 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelCanvas = new System.Windows.Forms.Panel();
+            this.buttonShow = new System.Windows.Forms.Button();
+            this.buttonHide = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // panelCanvas
+            // 
+            this.panelCanvas.BackColor = System.Drawing.Color.White;
+            this.panelCanvas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelCanvas.Location = new System.Drawing.Point(12, 12);
+            this.panelCanvas.Name = "panelCanvas";
+            this.panelCanvas.Size = new System.Drawing.Size(776, 487);
+            this.panelCanvas.TabIndex = 0;
+            this.panelCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCanvas_Paint);
+            // 
+            // buttonShow
+            // 
+            this.buttonShow.BackColor = System.Drawing.Color.SeaGreen;
+            this.buttonShow.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonShow.ForeColor = System.Drawing.Color.White;
+            this.buttonShow.Location = new System.Drawing.Point(12, 519);
+            this.buttonShow.Name = "buttonShow";
+            this.buttonShow.Size = new System.Drawing.Size(75, 45);
+            this.buttonShow.TabIndex = 1;
+            this.buttonShow.Text = "Show";
+            this.buttonShow.UseVisualStyleBackColor = false;
+            this.buttonShow.Click += new System.EventHandler(this.buttonShow_Click);
+            // 
+            // buttonHide
+            // 
+            this.buttonHide.BackColor = System.Drawing.Color.Maroon;
+            this.buttonHide.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHide.ForeColor = System.Drawing.Color.White;
+            this.buttonHide.Location = new System.Drawing.Point(118, 519);
+            this.buttonHide.Name = "buttonHide";
+            this.buttonHide.Size = new System.Drawing.Size(75, 45);
+            this.buttonHide.TabIndex = 2;
+            this.buttonHide.Text = "Hide";
+            this.buttonHide.UseVisualStyleBackColor = false;
+            this.buttonHide.Click += new System.EventHandler(this.buttonHide_Click);
             // 
             // CanvasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 595);
+            this.Controls.Add(this.buttonHide);
+            this.Controls.Add(this.buttonShow);
+            this.Controls.Add(this.panelCanvas);
             this.Name = "CanvasForm";
-            this.Text = "Form1";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.CanvasForm_Paint);
+            this.Text = "CanvasForm";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panelCanvas;
+        private System.Windows.Forms.Button buttonShow;
+        private System.Windows.Forms.Button buttonHide;
     }
 }
 
