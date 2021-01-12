@@ -151,7 +151,8 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
 
         public override LayoutType GetLayoutForChildren()
         {
-            return LayoutType.Vertical;
+            //return LayoutType.Vertical;
+            return LayoutType.VerticalBottomToTop;
         }
 
 
