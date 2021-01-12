@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-
-
+using System.Drawing;
+using UtilitiesDraw.PaintersObjects;
 
 namespace UtilitiesDraw.BusinessObjects.HouseBuilding
 {
@@ -49,6 +49,34 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
             set
             {
                 floors = value;
+            }
+        }
+
+
+
+        public override void DrawSelf(Graphics g, CanvasContext context)
+        {
+            int roofHeight = 20;
+            int livingPartHeight = context.Height - roofHeight;
+            //Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width, roofHeight);
+            //Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width, livingPartHeight);
+            //Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width - 1, roofHeight - 1);
+            //Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width - 1, livingPartHeight - 1);
+            //Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width - 2, roofHeight - 2);
+            //Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width - 2, livingPartHeight - 2);
+            Rectangle roofRectangle = new Rectangle(context.Left + 2, context.Top + 2, context.Width - 4, roofHeight - 4);
+            Rectangle livingRectangle = new Rectangle(context.Left + 2, context.Top + 2 + roofHeight, context.Width - 4, livingPartHeight - 4);
+            //using (Pen pen = new Pen(Color.Black, 1.0f))
+            using (Pen pen = new Pen(Color.Black, 2.0f))
+            {
+                //Point roofTip = new Point(roofRectangle.X + roofRectangle.Width / 2);
+                //Point roofLeft = new Point(roofRectangle.X, roofRectangle.Y);
+                //Point roofRight = new Point(roofRectangle.X + roofRectangle.Width, roofRectangle.Y + roofRectangle.Height, roofRectangle.Bottom);
+                Point roofTip = new Point(roofRectangle.Left + roofRectangle.Width / 2);
+                Point roofLeft = new Point(roofRectangle.Left, roofRectangle.Bottom);
+                Point roofRight = new Point(roofRectangle.Right, roofRectangle.Bottom);
+                g.DrawPolygon(pen, new Point[] { roofTip, roofLeft, roofRight});
+                g.DrawRectangle(pen, livingRectangle);
             }
         }
 
