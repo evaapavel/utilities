@@ -195,6 +195,57 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
 
 
 
+        public override LayoutType GetLayoutForChildren()
+        {
+            return LayoutType.Horizontal;
+        }
+
+
+
+        public override CanvasContext GetContextForChildren(CanvasContext context)
+        {
+            Rectangle flatsRectangle = GetFlatsRectangle(context);
+            CanvasContext contextForChildren = new CanvasContext(flatsRectangle);
+            // Make the space for children a little bit smaller.
+            contextForChildren.Left += 5;
+            contextForChildren.Top += 5;
+            contextForChildren.Width -= 10;
+            contextForChildren.Height -= 10;
+            return contextForChildren;
+        }
+
+
+
+        public override double GetRealWidth()
+        {
+            return 20.0;
+        }
+
+
+
+        public override double GetRealHeight()
+        {
+            double maxFlatHeight = 0.0;
+            this.flats.ForEach(flat => { if (flat.Height > maxFlatHeight) { maxFlatHeight = flat.Height; } });
+            double realHeight = Math.Ceiling(maxFlatHeight);
+            return realHeight;
+        }
+
+
+
+        public override List<BuildingElement> GetChildren()
+        {
+            List<BuildingElement> children = new List<BuildingElement>();
+            foreach (Flat flat in this.flats)
+            {
+                BuildingElement child = flat;
+                children.Add(child);
+            }
+            return children;
+        }
+
+
+
         // 0. patro (přízemí)
         // Byt: 10,2 m x 3,2 m, dvoukřídlé dveře, dvě okna "Standard"
         // Byt: 5,5 m x 3,2 m, jednokřídlé dveře, jedno okno "Standard"

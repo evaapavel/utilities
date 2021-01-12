@@ -100,7 +100,9 @@ namespace UtilitiesDraw
             ////Floor floor = Floor.GetGroundFloor();
             //Floor floor = Floor.GetFirstFloor();
             //CanvasContext context = new CanvasContext(panelCanvas.ClientRectangle.Left, panelCanvas.ClientRectangle.Top, panelCanvas.ClientRectangle.Width, panelCanvas.ClientRectangle.Height);
-            //floor.DrawSelf(g, context);
+            ////floor.DrawSelf(g, context);
+            //DrawEngine drawEngine = new DrawEngine(floor, g, context);
+            //drawEngine.DrawAllElements();
         }
 
 
