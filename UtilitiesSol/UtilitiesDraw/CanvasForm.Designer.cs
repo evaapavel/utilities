@@ -35,6 +35,9 @@
             // 
             // panelCanvas
             // 
+            this.panelCanvas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelCanvas.BackColor = System.Drawing.Color.White;
             this.panelCanvas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelCanvas.Location = new System.Drawing.Point(12, 12);
@@ -45,6 +48,7 @@
             // 
             // buttonShow
             // 
+            this.buttonShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonShow.BackColor = System.Drawing.Color.SeaGreen;
             this.buttonShow.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonShow.ForeColor = System.Drawing.Color.White;
@@ -58,6 +62,7 @@
             // 
             // buttonHide
             // 
+            this.buttonHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonHide.BackColor = System.Drawing.Color.Maroon;
             this.buttonHide.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHide.ForeColor = System.Drawing.Color.White;
@@ -79,6 +84,7 @@
             this.Controls.Add(this.panelCanvas);
             this.Name = "CanvasForm";
             this.Text = "CanvasForm";
+            this.Resize += new System.EventHandler(this.CanvasForm_Resize);
             this.ResumeLayout(false);
 
         }

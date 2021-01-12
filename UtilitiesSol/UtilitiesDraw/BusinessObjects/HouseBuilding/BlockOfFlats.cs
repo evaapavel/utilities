@@ -59,14 +59,18 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
             //int roofHeight = 20;
             int roofHeight = 40;
             int livingPartHeight = context.Height - roofHeight;
-            //Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width, roofHeight);
-            //Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width, livingPartHeight);
+            // ***
+            Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width, roofHeight);
+            Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width, livingPartHeight);
+            // ***
             //Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width - 1, roofHeight - 1);
             //Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width - 1, livingPartHeight - 1);
             //Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width - 2, roofHeight - 2);
             //Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width - 2, livingPartHeight - 2);
-            Rectangle roofRectangle = new Rectangle(context.Left + 2, context.Top + 2, context.Width - 4, roofHeight - 4);
-            Rectangle livingRectangle = new Rectangle(context.Left + 2, context.Top + 2 + roofHeight, context.Width - 4, livingPartHeight - 4);
+            // ***
+            //Rectangle roofRectangle = new Rectangle(context.Left + 2, context.Top + 2, context.Width - 4, roofHeight - 4);
+            //Rectangle livingRectangle = new Rectangle(context.Left + 2, context.Top + 2 + roofHeight, context.Width - 4, livingPartHeight - 4);
+            // ***
             //using (Pen pen = new Pen(Color.Black, 1.0f))
             using (Pen pen = new Pen(Color.Black, 2.0f))
             {
