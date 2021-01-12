@@ -56,7 +56,8 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
 
         public override void DrawSelf(Graphics g, CanvasContext context)
         {
-            int roofHeight = 20;
+            //int roofHeight = 20;
+            int roofHeight = 40;
             int livingPartHeight = context.Height - roofHeight;
             //Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width, roofHeight);
             //Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width, livingPartHeight);
@@ -75,7 +76,7 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
                 Point roofTip = new Point(roofRectangle.Left + roofRectangle.Width / 2);
                 Point roofLeft = new Point(roofRectangle.Left, roofRectangle.Bottom);
                 Point roofRight = new Point(roofRectangle.Right, roofRectangle.Bottom);
-                g.DrawPolygon(pen, new Point[] { roofTip, roofLeft, roofRight});
+                g.DrawPolygon(pen, new Point[] { roofTip, roofLeft, roofRight });
                 g.DrawRectangle(pen, livingRectangle);
             }
         }

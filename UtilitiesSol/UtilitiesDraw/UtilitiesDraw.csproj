@@ -63,6 +63,7 @@
       <DependentUpon>CanvasForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PaintersObjects\CanvasContext.cs" />
+    <Compile Include="PaintersObjects\DrawEngine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CanvasForm.resx">

@@ -65,6 +65,10 @@ namespace UtilitiesDraw
             BlockOfFlats block = BlockOfFlats.GetKLadviBlockOfFlats();
             CanvasContext context = new CanvasContext(0, 0, panelCanvas.Width, panelCanvas.Height);
             block.DrawSelf(g, context);
+
+            //Window window = Window.GetStandardWindow();
+            //CanvasContext context2 = new CanvasContext(0, 0, panelCanvas.Width, panelCanvas.Height);
+            //window.DrawSelf(g, context2);
         }
 
 
