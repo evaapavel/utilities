@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using UtilitiesDraw.BusinessObjects.HouseBuilding;
+using UtilitiesDraw.PaintersObjects;
+
+
 namespace UtilitiesDraw
 {
     public partial class CanvasForm : Form
@@ -32,10 +36,12 @@ namespace UtilitiesDraw
         {
             if (isDrawingVisible)
             {
-                Graphics g = e.Graphics;
-                //Pen pen = new Pen(Color.Black, 1.0f);
-                Pen pen = new Pen(Color.Black, 2.0f);
-                g.DrawLine(pen, 0, 0, 100, 100);
+                //Graphics g = e.Graphics;
+                ////Pen pen = new Pen(Color.Black, 1.0f);
+                //Pen pen = new Pen(Color.Black, 2.0f);
+                //g.DrawLine(pen, 0, 0, 100, 100);
+                //pen.Dispose();
+                DrawAll(e.Graphics);
             }
         }
 
@@ -50,6 +56,17 @@ namespace UtilitiesDraw
             this.isDrawingVisible = false;
             this.panelCanvas.Refresh();
         }
+
+
+
+
+        private void DrawAll(Graphics g)
+        {
+            BlockOfFlats block = BlockOfFlats.GetKLadviBlockOfFlats();
+            CanvasContext context = new CanvasContext(0, 0, panelCanvas.Width, panelCanvas.Height);
+            block.DrawSelf(g, context);
+        }
+
 
     }
 
