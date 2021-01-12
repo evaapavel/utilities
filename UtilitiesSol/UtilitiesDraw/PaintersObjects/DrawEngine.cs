@@ -40,7 +40,8 @@ namespace UtilitiesDraw.PaintersObjects
 
         private void DrawElementAndItsChildren(BuildingElement element, CanvasContext context)
         {
-            rootElement.DrawSelf(graphics, context);
+            //rootElement.DrawSelf(graphics, context);
+            element.DrawSelf(graphics, context);
             //CanvasContext context = GetCanvasForChildren(rootContext);
             //DrawChildren(rootElement, )
             List<BuildingElement> childElements = element.GetChildren();
@@ -57,8 +58,10 @@ namespace UtilitiesDraw.PaintersObjects
                 int childHeight = CalculateHeight(childElement.GetRealHeight(), sizeRecalcRatio, contextForChildren, layoutForChildren);
                 CanvasContext childContext = GenerateChildContext(childLeft, childTop, childWidth, childHeight);
                 DrawElementAndItsChildren(childElement, childContext);
-                childLeft += childWidth;
-                childTop += childHeight;
+                //childLeft += childWidth;
+                //childTop += childHeight;
+                childLeft += GetWidthIncrement(childWidth, layoutForChildren);
+                childTop += GetHeightIncrement(childHeight, layoutForChildren);
             }
         }
 
@@ -129,6 +132,40 @@ namespace UtilitiesDraw.PaintersObjects
                     double recalculatedHeight = realHeight * sizeRecalcRatio;
                     return Convert.ToInt32(Math.Truncate(recalculatedHeight));
                 //break;
+
+                default:
+                    throw new NotSupportedException($"This layout type is not supported here: {layoutType}");
+            }
+        }
+
+
+
+        private int GetWidthIncrement(int childWidth, LayoutType layoutType)
+        {
+            switch (layoutType)
+            {
+                case LayoutType.Horizontal:
+                    return childWidth;
+
+                case LayoutType.Vertical:
+                    return 0;
+
+                default:
+                    throw new NotSupportedException($"This layout type is not supported here: {layoutType}");
+            }
+        }
+
+
+
+        private int GetHeightIncrement(int childHeight, LayoutType layoutType)
+        {
+            switch (layoutType)
+            {
+                case LayoutType.Horizontal:
+                    return 0;
+
+                case LayoutType.Vertical:
+                    return childHeight;
 
                 default:
                     throw new NotSupportedException($"This layout type is not supported here: {layoutType}");

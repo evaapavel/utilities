@@ -56,20 +56,8 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
 
         public override void DrawSelf(Graphics g, CanvasContext context)
         {
-            //int roofHeight = 20;
-            int roofHeight = 40;
-            int livingPartHeight = context.Height - roofHeight;
-            // ***
-            Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width, roofHeight);
-            Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width, livingPartHeight);
-            // ***
-            //Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width - 1, roofHeight - 1);
-            //Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width - 1, livingPartHeight - 1);
-            //Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width - 2, roofHeight - 2);
-            //Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width - 2, livingPartHeight - 2);
-            // ***
-            //Rectangle roofRectangle = new Rectangle(context.Left + 2, context.Top + 2, context.Width - 4, roofHeight - 4);
-            //Rectangle livingRectangle = new Rectangle(context.Left + 2, context.Top + 2 + roofHeight, context.Width - 4, livingPartHeight - 4);
+            Rectangle roofRectangle = GetRoofRectangle(context);
+            Rectangle livingRectangle = GetLivingRectangle(context);
             // ***
             //using (Pen pen = new Pen(Color.Black, 1.0f))
             using (Pen pen = new Pen(Color.Black, 2.0f))
@@ -83,6 +71,128 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
                 g.DrawPolygon(pen, new Point[] { roofTip, roofLeft, roofRight });
                 g.DrawRectangle(pen, livingRectangle);
             }
+        }
+
+
+
+        private int GetRoofHeight()
+        {
+            //int roofHeight = 20;
+            int roofHeight = 40;
+            return roofHeight;
+        }
+
+
+
+        private int GetLivingPartHeight(CanvasContext context)
+        {
+            //int livingPartHeight = context.Height - roofHeight;
+            int livingPartHeight = context.Height - GetRoofHeight();
+            return livingPartHeight;
+        }
+
+
+
+        private Rectangle GetRoofRectangle(CanvasContext context)
+        {
+            ////int roofHeight = 20;
+            //int roofHeight = 40;
+            //int livingPartHeight = context.Height - roofHeight;
+            //// ***
+            //Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width, roofHeight);
+            //Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width, livingPartHeight);
+            //// ***
+            ////Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width - 1, roofHeight - 1);
+            ////Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width - 1, livingPartHeight - 1);
+            ////Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width - 2, roofHeight - 2);
+            ////Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width - 2, livingPartHeight - 2);
+            //// ***
+            ////Rectangle roofRectangle = new Rectangle(context.Left + 2, context.Top + 2, context.Width - 4, roofHeight - 4);
+            ////Rectangle livingRectangle = new Rectangle(context.Left + 2, context.Top + 2 + roofHeight, context.Width - 4, livingPartHeight - 4);
+            //// ***
+            int roofHeight = GetRoofHeight();
+            //int livingPartHeight = GetLivingPartHeight(context);
+            // ***
+            Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width, roofHeight);
+            //Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width, livingPartHeight);
+            // ***
+            return roofRectangle;
+        }
+
+
+
+        private Rectangle GetLivingRectangle(CanvasContext context)
+        {
+            ////int roofHeight = 20;
+            //int roofHeight = 40;
+            //int livingPartHeight = context.Height - roofHeight;
+            //// ***
+            //Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width, roofHeight);
+            //Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width, livingPartHeight);
+            //// ***
+            ////Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width - 1, roofHeight - 1);
+            ////Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width - 1, livingPartHeight - 1);
+            ////Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width - 2, roofHeight - 2);
+            ////Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width - 2, livingPartHeight - 2);
+            //// ***
+            ////Rectangle roofRectangle = new Rectangle(context.Left + 2, context.Top + 2, context.Width - 4, roofHeight - 4);
+            ////Rectangle livingRectangle = new Rectangle(context.Left + 2, context.Top + 2 + roofHeight, context.Width - 4, livingPartHeight - 4);
+            //// ***
+            int roofHeight = GetRoofHeight();
+            int livingPartHeight = GetLivingPartHeight(context);
+            // ***
+            //Rectangle roofRectangle = new Rectangle(context.Left, context.Top, context.Width, roofHeight);
+            Rectangle livingRectangle = new Rectangle(context.Left, context.Top + roofHeight, context.Width, livingPartHeight);
+            // ***
+            return livingRectangle;
+        }
+
+
+
+        public override LayoutType GetLayoutForChildren()
+        {
+            return LayoutType.Vertical;
+        }
+
+
+
+        public override CanvasContext GetContextForChildren(CanvasContext context)
+        {
+            Rectangle livingRectangle = GetLivingRectangle(context);
+            CanvasContext contextForChildren = new CanvasContext(livingRectangle);
+            // Make the space for children a little bit smaller.
+            contextForChildren.Left += 5;
+            contextForChildren.Top += 5;
+            contextForChildren.Width -= 10;
+            contextForChildren.Height -= 10;
+            return contextForChildren;
+        }
+
+
+
+        public override double GetRealWidth()
+        {
+            return 20.0;
+        }
+
+
+
+        public override double GetRealHeight()
+        {
+            return 13.0;
+        }
+
+
+
+        public override List<BuildingElement> GetChildren()
+        {
+            List<BuildingElement> children = new List<BuildingElement>();
+            foreach (Floor floor in this.floors)
+            {
+                BuildingElement child = floor;
+                children.Add(child);
+            }
+            return children;
         }
 
 

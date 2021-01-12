@@ -8,7 +8,7 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
 
 
 
-    public class Floor
+    public class Floor : BuildingElement
     {
 
 

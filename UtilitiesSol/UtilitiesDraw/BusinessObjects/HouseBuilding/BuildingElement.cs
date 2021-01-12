@@ -29,7 +29,6 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
 
 
 
-
         public virtual LayoutType GetLayoutForChildren()
         {
             return LayoutType.Horizontal;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 
 
@@ -55,6 +56,20 @@ namespace UtilitiesDraw.PaintersObjects
 
 
 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="rectangle">Rectangle that this context should be made of.</param>
+        public CanvasContext(Rectangle rectangle)
+        {
+            this.left = rectangle.Left;
+            this.top = rectangle.Top;
+            this.width = rectangle.Width;
+            this.height = rectangle.Height;
+        }
+
+
+
         /// <summary>X coordinate of the top-left corner of the drawing area.</summary>
         public int Left
         {
@@ -81,6 +96,18 @@ namespace UtilitiesDraw.PaintersObjects
         {
             get { return this.height; }
             set { this.height = value; }
+        }
+
+
+
+        /// <summary>
+        /// Converts this canvas context to a graphics rectangle.
+        /// </summary>
+        /// <returns>Returns a rectangle created out of this context.</returns>
+        public Rectangle ToRectangle()
+        {
+            Rectangle rectangle = new Rectangle(this.left, this.top, this.width, this.height);
+            return rectangle;
         }
 
 
