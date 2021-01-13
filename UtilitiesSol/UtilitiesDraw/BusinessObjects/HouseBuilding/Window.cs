@@ -7,7 +7,7 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
 
 
 
-    public class Window
+    public class Window : BuildingElement
     {
 
 
