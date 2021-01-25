@@ -10,11 +10,12 @@ namespace UtilitiesMain.Serialization
     /// <summary>
     /// Able to serialize and deserialize itself.
     /// </summary>
-    public abstract class SerializableObject
+    //public abstract class SerializableObject
+    public class SerializableObject
     {
-        
-        
-        
+
+
+
         private const int MaxFields = 100;
         
         
@@ -31,16 +32,16 @@ namespace UtilitiesMain.Serialization
         
         
         
-        protected abstract void StoreFieldsIntoArray();
+        //protected abstract void StoreFieldsIntoArray();
         
-        protected abstract void LoadFieldsFromArray();
+        //protected abstract void LoadFieldsFromArray();
         
         
         
         public void SerializeToFile(string pathToFile)
         {
             this.firstUnused = 0;
-            StoreFieldsIntoArray();
+            //StoreFieldsIntoArray();
             
             // Serialize the contents of the array into the given file.
             // ...

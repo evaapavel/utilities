@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UtilitiesMain.DataClasses;
 
 using UtilitiesMain.Serialization;
+using UtilitiesMain.TextFileReading;
 
 namespace UtilitiesMain
 {
@@ -23,7 +24,9 @@ namespace UtilitiesMain
             //ShowVariablesAndProperties();
 
 
-            SerializeExample.Go();
+            //SerializeExample.Go();
+
+            StreamReaderExample.Go();
 
         }
 

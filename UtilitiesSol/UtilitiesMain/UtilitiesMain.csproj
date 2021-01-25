@@ -62,6 +62,7 @@
     <Compile Include="Serialization\Theme.cs" />
     <Compile Include="Serialization\Umbrella.cs" />
     <Compile Include="Serialization\UserPreferences.cs" />
+    <Compile Include="TextFileReading\StreamReaderExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
