@@ -4,15 +4,14 @@ using System.Collections.Generic;
 
 using UtilitiesMain.DataClasses;
 
+using UtilitiesMain.Serialization;
+
 namespace UtilitiesMain
 {
     class Program
     {
         static void Main(string[] args)
         {
-
-
-
 
             //ShowDataClasses();
 
@@ -21,7 +20,10 @@ namespace UtilitiesMain
 
             //EncryptMessage();
 
-            ShowVariablesAndProperties();
+            //ShowVariablesAndProperties();
+
+
+            SerializeExample.Go();
 
         }
 

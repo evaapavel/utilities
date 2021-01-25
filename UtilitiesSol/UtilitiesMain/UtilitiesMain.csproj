@@ -55,6 +55,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\DataLine.cs" />
     <Compile Include="Reports\InputFileProcessor.cs" />
+    <Compile Include="Serialization\Anorak.cs" />
+    <Compile Include="Serialization\SerializableObject.cs" />
+    <Compile Include="Serialization\SerializeExample.cs" />
+    <Compile Include="Serialization\StockItem.cs" />
+    <Compile Include="Serialization\Theme.cs" />
+    <Compile Include="Serialization\Umbrella.cs" />
+    <Compile Include="Serialization\UserPreferences.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
