@@ -2,8 +2,6 @@ using System;
 using System.Text;
 using System.Collections.Generic;
 
-//using UtilitiesMain.MethodExtraction.Example;
-//using UtilitiesMain.MethodExtraction.Exercise;
 using UtilitiesMain.DataClasses;
 
 namespace UtilitiesMain
@@ -14,87 +12,19 @@ namespace UtilitiesMain
         {
 
 
-            //// The code provided will print ‘Hello World’ to the console.
-            //// Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            ////Console.WriteLine("Hello World!");
-            ////Console.ReadKey();
-
-            //// Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
-
-
-            //// Try the "method extraction" example.
-            //PersonService personService = new PersonService();
-            //personService.MethodToRefactor();
-            //Console.WriteLine();
-            //Console.WriteLine();
-            //personService.RefactoredMethod();
-
-            //// Merge files.
-            //string pathToFileA = @"C:\pfoltyn\MyProjects\Utilities\20201012_hodina\UtilitiesSol\Resources\InputFileA.txt";
-            //string pathToFileB = @"C:\pfoltyn\MyProjects\Utilities\20201012_hodina\UtilitiesSol\Resources\InputFileB.txt";
-            //string pathToFileC = @"C:\pfoltyn\MyProjects\Utilities\20201012_hodina\UtilitiesSol\Resources\InputFileC.txt";
-            //string pathToFileD = @"C:\pfoltyn\MyProjects\Utilities\20201012_hodina\UtilitiesSol\Resources\InputFileD.txt";
-            //FileService fileService = new FileService();
-            //fileService.MergeFiles(pathToFileA, pathToFileB, pathToFileC, pathToFileD);
 
 
             //ShowDataClasses();
 
             //ShowVariablesAndProperties();
 
-            // Ahoj Olgo!
-
-            //string sentence = "Není kouře bez ohýnku.";
-            ////Console.WriteLine(sentence.Length);
-            //char first = sentence[0];
-            //char fourth = sentence[3];
-            //char tenth = sentence[9];
-            //string firstAndTenth = first.ToString() + tenth.ToString();
-            //Console.WriteLine(firstAndTenth);
-            //Console.WriteLine(fourth);
-
-            //string s = "Dlužíte nám 100 Kč";
-            //s = s.Replace("100", "1000");
-            //Console.WriteLine(s);
-            //string u = s.Substring(8, 3);
-            //Console.WriteLine(u);
-
-
-            //StringBuilder sentence = new StringBuilder("Není kouře bez ohýnku.");
-            //sentence.Append(" Kuk!");
-            //Console.WriteLine(sentence.Length);
-            //Console.WriteLine(sentence.Capacity);
-
-            ////string personName = "John";
-            //StringBuilder personName = new StringBuilder("John");
-            //Person john = new Person(personName, 35);
-            //Person mary = new Person(personName, 22);
-            ////mary.firstName = mary.firstName.Replace("John", "Mary");
-            //mary.firstName.Replace("John", "Mary");
-            //Console.WriteLine($"Jméno: {john.firstName}  Věk: {john.age}");
-            //Console.WriteLine($"Jméno: {mary.firstName}  Věk: {mary.age}");
 
             //EncryptMessage();
-
-            //TestGenericList();
 
             ShowVariablesAndProperties();
 
         }
 
-        //public class Person
-        //{
-        //    //public string firstName;
-        //    public StringBuilder firstName;
-        //    public int age;
-
-        //    //public Person(string firstName, int age)
-        //    public Person(StringBuilder firstName, int age)
-        //    {
-        //        this.firstName = firstName;
-        //        this.age = age;
-        //    }
-        //}
 
 
         static void ShowVariablesAndProperties()
@@ -351,65 +281,6 @@ namespace UtilitiesMain
             Console.WriteLine(output);
         }
 
-        static void TestGenericList()
-        {
-            List<int> inputList = new List<int>();
-            inputList.Add(10);
-            inputList.Add(3);
-            inputList.Add(-10);
-            inputList.Add(8);
-            inputList.Add(27);
-            inputList.Add(9);
-            inputList.Add(8);
-            inputList.Add(7);
-            inputList.Add(4);
-            inputList.Add(5);
-            inputList.Add(-2);
-            inputList.Add(12);
-            inputList.Add(2);
-            inputList.Add(4);
-            inputList.Add(-7);
-            inputList.Add(0);
-            inputList.Add(1);
-            inputList.Add(2);
-            for (int i = 0; i < inputList.Count; i++)
-            {
-                Console.WriteLine(inputList[i]);
-            }
-
-            Console.WriteLine();
-            Console.WriteLine();
-
-            //List<int> inputList = new List<int>();
-            inputList = new List<int>();
-            inputList.Add(10);
-            inputList.Add(-2);
-            inputList.Add(12);
-            inputList.Add(3);
-            inputList.Add(4);
-            inputList.Add(3);
-            inputList.Add(10);
-            inputList.Add(9);
-            inputList.Add(8);
-            inputList.Add(7);
-            inputList.Add(4);
-            inputList.Add(2);
-            inputList.Add(0);
-            inputList.Add(0);
-            inputList.Add(5);
-            inputList.Add(27);
-            inputList.Add(1);
-            inputList.Add(2);
-            for (int i = 0; i < inputList.Count; i++)
-            {
-                Console.WriteLine(inputList[i]);
-            }
-
-            Console.WriteLine();
-            Console.WriteLine();
-
-            Console.ReadKey(true);
-        }
 
 
     }

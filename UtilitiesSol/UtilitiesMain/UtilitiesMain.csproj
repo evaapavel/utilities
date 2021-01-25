@@ -51,9 +51,6 @@
     <Compile Include="DataClasses\EBookshop.cs" />
     <Compile Include="DataClasses\Person.cs" />
     <Compile Include="DataClasses\Publisher.cs" />
-    <Compile Include="MethodExtraction\Example\Person.cs" />
-    <Compile Include="MethodExtraction\Example\PersonService.cs" />
-    <Compile Include="MethodExtraction\Exercise\FileService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\DataLine.cs" />
