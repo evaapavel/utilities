@@ -24,9 +24,9 @@ namespace UtilitiesMain
             //ShowVariablesAndProperties();
 
 
-            //SerializeExample.Go();
+            SerializeExample.Go();
 
-            StreamReaderExample.Go();
+            //StreamReaderExample.Go();
 
         }
 

@@ -12,10 +12,12 @@ namespace UtilitiesMain.TextFileReading
 
         public static void Go()
         {
+            StreamReader sr = null;
+
             try
             {
                 string pathToTestFile = @"X:\MyFiles\Input\InputText.txt";
-                StreamReader sr = new StreamReader(pathToTestFile);
+                sr = new StreamReader(pathToTestFile);
 
                 while (!sr.EndOfStream)
                 {
@@ -26,12 +28,16 @@ namespace UtilitiesMain.TextFileReading
                     }
                 }
 
-                sr.Close();
-                sr.Dispose();
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+            }
+
+            if (sr != null)
+            {
+                sr.Close();
+                sr.Dispose();
             }
         }
 
