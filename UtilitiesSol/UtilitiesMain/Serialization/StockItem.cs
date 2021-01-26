@@ -7,6 +7,9 @@ namespace UtilitiesMain.Serialization
 
 
 
+    /// <summary>
+    /// Represents an item that can be shopped on an eshop.
+    /// </summary>
     public class StockItem : SerializableObject
     {
 

@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 
 
@@ -10,8 +11,7 @@ namespace UtilitiesMain.Serialization
     /// <summary>
     /// Able to serialize and deserialize itself.
     /// </summary>
-    //public abstract class SerializableObject
-    public class SerializableObject
+    public abstract class SerializableObject
     {
 
 
@@ -32,19 +32,38 @@ namespace UtilitiesMain.Serialization
         
         
         
-        //protected abstract void StoreFieldsIntoArray();
+        /// <summary>
+        /// To be implemented by derived classes.
+        /// Each descendant must override this method by storing its fields in the common array (this.fields).
+        /// </summary>
+        protected abstract void StoreFieldsIntoArray();
         
-        //protected abstract void LoadFieldsFromArray();
+
+
+        /// <summary>
+        /// To be implemented by derived classes.
+        /// Each descendant must override this method by loading information from the common array (this.fields) and storing the data into its fields.
+        /// </summary>
+        protected abstract void LoadFieldsFromArray();
         
         
         
         public void SerializeToFile(string pathToFile)
         {
             this.firstUnused = 0;
-            //StoreFieldsIntoArray();
-            
+            StoreFieldsIntoArray();
+
             // Serialize the contents of the array into the given file.
-            // ...
+            using (StreamWriter streamWriter = new StreamWriter(pathToFile))
+            {
+                for (int i = 0; i < this.firstUnused; i++)
+                {
+                    object fieldValue = this.fields[i];
+                    streamWriter.WriteLine(fieldValue);
+                    //String dataType = fieldValue.GetType().Name;
+                    //streamWriter.WriteLine($"{dataType}:{fieldValue.ToString()}");
+                }
+            }
         }
         
         

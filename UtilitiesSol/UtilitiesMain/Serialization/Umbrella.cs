@@ -7,6 +7,9 @@ namespace UtilitiesMain.Serialization
 
 
 
+    /// <summary>
+    /// An umbrella in stock.
+    /// </summary>
     public class Umbrella : StockItem
     {
 

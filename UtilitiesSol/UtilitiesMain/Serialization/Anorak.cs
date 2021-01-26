@@ -7,6 +7,9 @@ namespace UtilitiesMain.Serialization
 
 
 
+    /// <summary>
+    /// An anorak in stock.
+    /// </summary>
     public class Anorak : StockItem
     {
 

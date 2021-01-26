@@ -6,6 +6,9 @@ namespace UtilitiesMain.Serialization
 
 
 
+    /// <summary>
+    /// Accumulates preferences of the user such as their favourite color, whether they want to be asked before deleting something etc.
+    /// </summary>
     public class UserPreferences : SerializableObject
     {
 
