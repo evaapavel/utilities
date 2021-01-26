@@ -18,8 +18,12 @@ namespace UtilitiesMain.Serialization
 
         private const int MaxFields = 100;
         
-        
+
+
+        /// <summary>Values of fields in serializable objects gathered together into a single array.</summary>
         protected object[] fields;
+
+        /// <summary>First unused index in the fields array.</summary>
         protected int firstUnused;
         
         
@@ -40,14 +44,18 @@ namespace UtilitiesMain.Serialization
         
 
 
+        // /// <summary>
+        // /// To be implemented by derived classes.
+        // /// Each descendant must override this method by loading information from the common array (this.fields) and storing the data into its fields.
+        // /// </summary>
+        //protected abstract void LoadFieldsFromArray();
+        
+        
+        
         /// <summary>
-        /// To be implemented by derived classes.
-        /// Each descendant must override this method by loading information from the common array (this.fields) and storing the data into its fields.
+        /// Serialize this object into a given file.
         /// </summary>
-        protected abstract void LoadFieldsFromArray();
-        
-        
-        
+        /// <param name="pathToFile">Path to the file that this object should be serialized into.</param>
         public void SerializeToFile(string pathToFile)
         {
             this.firstUnused = 0;

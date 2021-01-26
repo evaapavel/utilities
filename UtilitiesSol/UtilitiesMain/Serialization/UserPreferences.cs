@@ -12,6 +12,8 @@ namespace UtilitiesMain.Serialization
     public class UserPreferences : SerializableObject
     {
 
+
+
         /// <summary>Application theme.</summary>
         public Theme Theme { get; set; }
 
@@ -20,6 +22,23 @@ namespace UtilitiesMain.Serialization
 
         /// <summary>Last directory used when downloading stuff.</summary>
         public string CurrentDirectory { get; set; }
+
+
+
+        protected override void StoreFieldsIntoArray()
+        {
+            // We have to store values selected for theme, deletion confirmation and current directory into the "fields" array.
+            // The "fields" array has the access level of "protected". Therefore we can access it here (in this derived type).
+            // So has the "firstUnused" instance variable.
+            this.fields[this.firstUnused] = this.Theme;
+            this.firstUnused++;
+            this.fields[this.firstUnused] = this.IsConfirmDelete;
+            this.firstUnused++;
+            this.fields[this.firstUnused] = this.CurrentDirectory;
+            this.firstUnused++;
+        }
+
+
 
     }
 
