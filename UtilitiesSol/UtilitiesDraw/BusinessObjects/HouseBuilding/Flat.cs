@@ -7,7 +7,7 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
 
 
 
-    public class Flat : BuildingElement
+    public abstract class Flat : BuildingElement
     {
 
 
@@ -110,6 +110,14 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
             Flat flat = new TwoWindowFlat(8.2, 3.2, Door.GetSingleDoor(), Window.GetFrenchWindow(), Window.GetFrenchWindow());
             return flat;
         }
+
+
+
+        //public static Flat GetVeryOddFlat()
+        //{
+        //    Flat flat = new Flat(2.0, 2.0, Door.GetSingleDoor());
+        //    return flat;
+        //}
 
 
 
