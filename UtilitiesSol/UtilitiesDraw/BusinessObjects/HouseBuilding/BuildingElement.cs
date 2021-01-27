@@ -12,7 +12,12 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
 
 
     public class BuildingElement
+    //public interface IBuildingElement
     {
+
+
+
+        //void DrawSelf(Graphics g, CanvasContext context);
 
 
 

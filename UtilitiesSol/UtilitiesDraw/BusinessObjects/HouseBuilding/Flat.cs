@@ -8,6 +8,7 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
 
 
     public abstract class Flat : BuildingElement
+    //public abstract class Flat
     {
 
 

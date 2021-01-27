@@ -238,7 +238,7 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
             List<BuildingElement> children = new List<BuildingElement>();
             foreach (Flat flat in this.flats)
             {
-                BuildingElement child = flat;
+                BuildingElement child = (BuildingElement) flat;
                 children.Add(child);
             }
             return children;

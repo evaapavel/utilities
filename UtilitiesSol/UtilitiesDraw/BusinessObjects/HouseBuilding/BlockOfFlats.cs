@@ -9,6 +9,7 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
 
 
     public class BlockOfFlats : BuildingElement
+    //public class BlockOfFlats : IBuildingElement
     {
 
 

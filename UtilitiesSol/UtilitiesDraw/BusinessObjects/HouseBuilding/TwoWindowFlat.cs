@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Drawing;
+
+
+using UtilitiesDraw.PaintersObjects;
 
 
 
@@ -7,7 +11,7 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
 
 
 
-    public class TwoWindowFlat : Flat
+    public class TwoWindowFlat : Flat//, IBuildingElement//, IComparable
     {
 
 
@@ -56,6 +60,16 @@ namespace UtilitiesDraw.BusinessObjects.HouseBuilding
             set
             {
                 rightWindow = value;
+            }
+        }
+
+
+
+        public void DrawSelf(Graphics g, CanvasContext context)
+        {
+            using (Pen p = new Pen(Color.Blue))
+            {
+                g.DrawRectangle(p, context.ToRectangle());
             }
         }
 
