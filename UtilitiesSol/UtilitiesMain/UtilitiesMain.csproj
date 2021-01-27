@@ -63,6 +63,7 @@
     <Compile Include="Serialization\Umbrella.cs" />
     <Compile Include="Serialization\UserPreferences.cs" />
     <Compile Include="TextFileReading\StreamReaderExample.cs" />
+    <Compile Include="TextFileWriting\StreamWriterExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

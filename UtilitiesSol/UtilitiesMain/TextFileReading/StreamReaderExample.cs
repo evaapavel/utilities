@@ -33,11 +33,13 @@ namespace UtilitiesMain.TextFileReading
             {
                 Console.WriteLine(e.Message);
             }
-
-            if (sr != null)
+            finally
             {
-                sr.Close();
-                sr.Dispose();
+                if (sr != null)
+                {
+                    sr.Close();
+                    sr.Dispose();
+                }
             }
         }
 

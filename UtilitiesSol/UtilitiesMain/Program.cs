@@ -6,6 +6,7 @@ using UtilitiesMain.DataClasses;
 
 using UtilitiesMain.Serialization;
 using UtilitiesMain.TextFileReading;
+using UtilitiesMain.TextFileWriting;
 
 namespace UtilitiesMain
 {
@@ -24,9 +25,10 @@ namespace UtilitiesMain
             //ShowVariablesAndProperties();
 
 
-            SerializeExample.Go();
+            //SerializeExample.Go();
 
             //StreamReaderExample.Go();
+            StreamWriterExample.Go();
 
         }
 
