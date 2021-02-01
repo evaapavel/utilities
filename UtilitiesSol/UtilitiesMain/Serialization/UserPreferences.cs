@@ -40,6 +40,13 @@ namespace UtilitiesMain.Serialization
 
 
 
+        protected override void LoadFieldsFromArray()
+        {
+            throw new NotImplementedException();
+        }
+
+
+
     }
 
 

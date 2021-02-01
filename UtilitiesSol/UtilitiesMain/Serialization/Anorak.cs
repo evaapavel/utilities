@@ -20,6 +20,21 @@ namespace UtilitiesMain.Serialization
 
 
 
+        protected override void StoreFieldsIntoArray()
+        {
+            base.StoreFieldsIntoArray();
+            fields[firstUnused] = Size;
+            firstUnused++;
+        }
+
+
+
+        protected override void LoadFieldsFromArray()
+        {
+            base.LoadFieldsFromArray();
+        }
+
+
     }
 
 

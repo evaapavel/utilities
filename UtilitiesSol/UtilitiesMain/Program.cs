@@ -25,10 +25,10 @@ namespace UtilitiesMain
             //ShowVariablesAndProperties();
 
 
-            //SerializeExample.Go();
+            SerializeExample.Go();
 
             //StreamReaderExample.Go();
-            StreamWriterExample.Go();
+            //StreamWriterExample.Go();
 
         }
 

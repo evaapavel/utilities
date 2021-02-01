@@ -10,8 +10,8 @@ namespace UtilitiesMain.Serialization
     /// <summary>
     /// Represents an item that can be shopped on an eshop.
     /// </summary>
-    //public class StockItem : SerializableObject
-    public class StockItem
+    public class StockItem : SerializableObject
+    //public class StockItem
     {
 
 
@@ -21,6 +21,21 @@ namespace UtilitiesMain.Serialization
 
         /// <summary>Item's bar code.</summary>
         public string Ean { get; set; }
+
+
+
+        protected override void LoadFieldsFromArray()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void StoreFieldsIntoArray()
+        {
+            fields[firstUnused] = Price;
+            firstUnused++;
+            fields[firstUnused] = Ean;
+            firstUnused++;
+        }
 
 
 

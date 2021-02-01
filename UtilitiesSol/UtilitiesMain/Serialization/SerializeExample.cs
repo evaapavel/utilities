@@ -18,7 +18,10 @@ namespace UtilitiesMain.Serialization
             userPreferences.IsConfirmDelete = true;
             userPreferences.CurrentDirectory = Directory.GetCurrentDirectory();
             string serializeDir = @"X:\MyFiles\Output";
-            userPreferences.SerializeToFile(serializeDir);
+            string serializeFileUserPreferences = "UserPrefs.txt";
+            string filePath = Path.Combine(serializeDir, serializeFileUserPreferences);
+            //userPreferences.SerializeToFile(serializeDir);
+            userPreferences.SerializeToFile(filePath);
         }
 
 

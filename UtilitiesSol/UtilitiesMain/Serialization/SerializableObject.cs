@@ -41,17 +41,17 @@ namespace UtilitiesMain.Serialization
         /// Each descendant must override this method by storing its fields in the common array (this.fields).
         /// </summary>
         protected abstract void StoreFieldsIntoArray();
-        
 
 
-        // /// <summary>
-        // /// To be implemented by derived classes.
-        // /// Each descendant must override this method by loading information from the common array (this.fields) and storing the data into its fields.
-        // /// </summary>
-        //protected abstract void LoadFieldsFromArray();
-        
-        
-        
+
+        /// <summary>
+        /// To be implemented by derived classes.
+        /// Each descendant must override this method by loading information from the common array (this.fields) and storing the data into its fields.
+        /// </summary>
+        protected abstract void LoadFieldsFromArray();
+
+
+
         /// <summary>
         /// Serialize this object into a given file.
         /// </summary>
