@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayCopying\ArrayCopier.cs" />
     <Compile Include="BusinessObjects\Certificate.cs" />
     <Compile Include="BusinessObjects\CertificateItem.cs" />
     <Compile Include="BusinessObjects\Student.cs" />

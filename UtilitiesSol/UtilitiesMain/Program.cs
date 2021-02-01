@@ -7,6 +7,7 @@ using UtilitiesMain.DataClasses;
 using UtilitiesMain.Serialization;
 using UtilitiesMain.TextFileReading;
 using UtilitiesMain.TextFileWriting;
+using UtilitiesMain.ArrayCopying;
 
 namespace UtilitiesMain
 {
@@ -29,6 +30,8 @@ namespace UtilitiesMain
 
             //StreamReaderExample.Go();
             //StreamWriterExample.Go();
+
+            //ArrayCopier.Go();
 
         }
 
