@@ -35,6 +35,45 @@ namespace UtilitiesMain.Serialization
 
 
 
+        public static void testIsAndAs()
+        {
+            SerializableObject sr = new Umbrella();
+            //...
+
+
+            //sr.SerializeToFile(...);
+            //sr.Price = 200;
+
+            ChangeObject(ref sr);
+
+            if (sr is Umbrella)
+            {
+                Umbrella um = (Umbrella)sr;
+                um.Price = 200;
+                um.Ean = "123468904";
+                um.Type = "automatic";
+            }
+
+
+            if (sr is StockItem)
+            {
+                StockItem si = (StockItem)sr;
+                si.Price = 200;
+                //si.Type = "automatic";
+            }
+
+        }
+
+
+
+        private static void ChangeObject(ref SerializableObject obj)
+        {
+            obj = new Anorak();
+        }
+
+
+
+
     }
 
 
