@@ -23,8 +23,11 @@ namespace UtilitiesMain.Serialization
         /// <summary>Values of fields in serializable objects gathered together into a single array.</summary>
         protected object[] fields;
 
-        /// <summary>First unused index in the fields array.</summary>
+        /// <summary>First unused index in the fields array (when serializing).</summary>
         protected int firstUnused;
+
+        /// <summary>Index (to the fields array) of the item that is about to be read (when deserializing).</summary>
+        protected int currentToRead;
         
         
         
