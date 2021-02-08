@@ -8,6 +8,7 @@ using UtilitiesMain.Serialization;
 using UtilitiesMain.TextFileReading;
 using UtilitiesMain.TextFileWriting;
 using UtilitiesMain.ArrayCopying;
+using UtilitiesMain.CsvProcessing;
 
 namespace UtilitiesMain
 {
@@ -32,6 +33,8 @@ namespace UtilitiesMain
             //StreamWriterExample.Go();
 
             //ArrayCopier.Go();
+
+            //CsvExample.Go();
 
         }
 

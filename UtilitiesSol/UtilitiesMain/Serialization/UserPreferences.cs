@@ -45,6 +45,7 @@ namespace UtilitiesMain.Serialization
             Theme = (Theme)fields[currentToRead];
             currentToRead++;
             IsConfirmDelete = (bool)fields[currentToRead];
+            //IsConfirmDelete = Convert.ToBoolean( fields[currentToRead] );
             currentToRead++;
             CurrentDirectory = (string)fields[currentToRead];
             currentToRead++;

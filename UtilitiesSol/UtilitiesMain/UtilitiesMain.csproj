@@ -48,6 +48,10 @@
     <Compile Include="BusinessObjects\Student.cs" />
     <Compile Include="BusinessObjects\StudentSubjectMark.cs" />
     <Compile Include="BusinessObjects\Subject.cs" />
+    <Compile Include="CsvProcessing\Country.cs" />
+    <Compile Include="CsvProcessing\CsvExample.cs" />
+    <Compile Include="CsvProcessing\CsvParser.cs" />
+    <Compile Include="CsvProcessing\President.cs" />
     <Compile Include="DataClasses\Book.cs" />
     <Compile Include="DataClasses\EBookshop.cs" />
     <Compile Include="DataClasses\Person.cs" />
