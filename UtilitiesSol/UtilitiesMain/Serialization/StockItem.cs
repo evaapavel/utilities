@@ -24,17 +24,20 @@ namespace UtilitiesMain.Serialization
 
 
 
-        protected override void LoadFieldsFromArray()
-        {
-            throw new NotImplementedException();
-        }
-
         protected override void StoreFieldsIntoArray()
         {
             fields[firstUnused] = Price;
             firstUnused++;
             fields[firstUnused] = Ean;
             firstUnused++;
+        }
+
+        protected override void LoadFieldsFromArray()
+        {
+            Price = (decimal)fields[currentToRead];
+            currentToRead++;
+            Ean = (string)fields[currentToRead];
+            currentToRead++;
         }
 
 

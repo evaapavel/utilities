@@ -13,6 +13,9 @@ namespace UtilitiesMain.Serialization
 
         public static void Go()
         {
+
+            // User preferences.
+            // Serialization.
             UserPreferences userPreferences = new UserPreferences();
             userPreferences.Theme = Theme.Cyan;
             userPreferences.IsConfirmDelete = true;
@@ -22,6 +25,12 @@ namespace UtilitiesMain.Serialization
             string filePath = Path.Combine(serializeDir, serializeFileUserPreferences);
             //userPreferences.SerializeToFile(serializeDir);
             userPreferences.SerializeToFile(filePath);
+            // Deserialization.
+            UserPreferences up2 = new UserPreferences();
+            up2.DeserializeFromFile(filePath);
+
+
+            // Anorak.
             //Anorak anorak = new Anorak();
             //anorak.Price = 990;
             //anorak.Ean = "1946493894560";
@@ -31,6 +40,7 @@ namespace UtilitiesMain.Serialization
             //string filePath = Path.Combine(serializeDir, serializeFileAnorak);
             ////userPreferences.SerializeToFile(serializeDir);
             //anorak.SerializeToFile(filePath);
+
         }
 
 

@@ -81,11 +81,23 @@ namespace UtilitiesMain.Serialization
         
         public void DeserializeFromFile(string pathToFile)
         {
-            
+            using (StreamReader streamReader = new StreamReader(pathToFile))
+            {
+                int i = 0;
+                while (!streamReader.EndOfStream)
+                {
+                    string line = streamReader.ReadLine();
+                    object fieldValue = line;
+                    this.fields[i] = fieldValue;
+                    i++;
+                }
+            }
+            this.currentToRead = 0;
+            LoadFieldsFromArray();
         }
-        
-        
-        
+
+
+
     }
 
 

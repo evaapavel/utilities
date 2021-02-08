@@ -32,6 +32,8 @@ namespace UtilitiesMain.Serialization
         protected override void LoadFieldsFromArray()
         {
             base.LoadFieldsFromArray();
+            Size = (double) fields[currentToRead];
+            currentToRead++;
         }
 
 

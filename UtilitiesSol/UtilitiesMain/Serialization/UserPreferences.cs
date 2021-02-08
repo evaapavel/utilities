@@ -42,7 +42,12 @@ namespace UtilitiesMain.Serialization
 
         protected override void LoadFieldsFromArray()
         {
-            throw new NotImplementedException();
+            Theme = (Theme)fields[currentToRead];
+            currentToRead++;
+            IsConfirmDelete = (bool)fields[currentToRead];
+            currentToRead++;
+            CurrentDirectory = (string)fields[currentToRead];
+            currentToRead++;
         }
 
 
