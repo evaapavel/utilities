@@ -27,14 +27,14 @@ namespace UtilitiesMain
             //ShowVariablesAndProperties();
 
 
-            SerializeExample.Go();
+            //SerializeExample.Go();
 
             //StreamReaderExample.Go();
             //StreamWriterExample.Go();
 
             //ArrayCopier.Go();
 
-            //CsvExample.Go();
+            CsvExample.Go();
 
         }
 

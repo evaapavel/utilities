@@ -49,6 +49,7 @@
     <Compile Include="BusinessObjects\StudentSubjectMark.cs" />
     <Compile Include="BusinessObjects\Subject.cs" />
     <Compile Include="CsvProcessing\Country.cs" />
+    <Compile Include="CsvProcessing\CsvCreator.cs" />
     <Compile Include="CsvProcessing\CsvExample.cs" />
     <Compile Include="CsvProcessing\CsvParser.cs" />
     <Compile Include="CsvProcessing\President.cs" />
