@@ -17,7 +17,9 @@ namespace UtilitiesDraw
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new CanvasForm());
-            Application.Run(new PaintingForm());
+            //Application.Run(new PaintingForm());
+            //Application.Run(new TestForm());
+            Application.Run(new TrialForm());
         }
     }
 }

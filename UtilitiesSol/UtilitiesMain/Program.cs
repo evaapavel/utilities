@@ -36,6 +36,9 @@ namespace UtilitiesMain
 
             CsvExample.Go();
 
+
+            Console.ReadKey();
+
         }
 
 
