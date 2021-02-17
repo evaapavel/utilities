@@ -1,0 +1,28 @@
+System.Windows.Forms.Button
+System.Windows.Forms.Button
+System.Windows.Forms.Button
+New Message
+System.Windows.Forms.Button
+Clear
+
+Application started anew...
+
+Application started anew...
+System.Windows.Forms.Button
+New Message
+System.Windows.Forms.Panel
+System.Windows.Forms.Button
+Clear
+
+Application started anew...
+Method: ButtonNewMessage_Click
+System.Windows.Forms.Button
+New Message
+Method: PanelTest_MouseDown
+System.Windows.Forms.Panel
+X: 169   Y: 68
+Method: PanelTest_Click
+System.Windows.Forms.Panel
+Method: ButtonClear_Click
+System.Windows.Forms.Button
+Clear

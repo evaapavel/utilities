@@ -18,8 +18,8 @@ namespace UtilitiesDraw
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new CanvasForm());
             //Application.Run(new PaintingForm());
-            //Application.Run(new TestForm());
-            Application.Run(new TrialForm());
+            Application.Run(new TestForm());
+            //Application.Run(new TrialForm());
         }
     }
 }

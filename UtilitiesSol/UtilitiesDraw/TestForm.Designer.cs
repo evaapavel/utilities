@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonCompute = new System.Windows.Forms.Button();
+            this.buttonNewMessage = new System.Windows.Forms.Button();
             this.labelMessage = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.panelTest = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // buttonCompute
+            // buttonNewMessage
             // 
-            this.buttonCompute.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.buttonCompute.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonCompute.Location = new System.Drawing.Point(28, 397);
-            this.buttonCompute.Name = "buttonCompute";
-            this.buttonCompute.Size = new System.Drawing.Size(131, 43);
-            this.buttonCompute.TabIndex = 0;
-            this.buttonCompute.Text = "Compute";
-            this.buttonCompute.UseVisualStyleBackColor = false;
-            this.buttonCompute.Click += new System.EventHandler(this.ButtonCompute_Click);
+            this.buttonNewMessage.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.buttonNewMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonNewMessage.Location = new System.Drawing.Point(28, 397);
+            this.buttonNewMessage.Name = "buttonNewMessage";
+            this.buttonNewMessage.Size = new System.Drawing.Size(131, 43);
+            this.buttonNewMessage.TabIndex = 0;
+            this.buttonNewMessage.Text = "New Message";
+            this.buttonNewMessage.UseVisualStyleBackColor = false;
+            this.buttonNewMessage.Click += new System.EventHandler(this.ButtonNewMessage_Click);
             // 
             // labelMessage
             // 
@@ -59,24 +60,36 @@
             // 
             this.buttonClear.BackColor = System.Drawing.Color.LightCoral;
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonClear.Location = new System.Drawing.Point(658, 405);
+            this.buttonClear.Location = new System.Drawing.Point(658, 389);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(116, 34);
+            this.buttonClear.Size = new System.Drawing.Size(116, 50);
             this.buttonClear.TabIndex = 2;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
             this.buttonClear.Click += new System.EventHandler(this.ButtonClear_Click);
+            // 
+            // panelTest
+            // 
+            this.panelTest.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelTest.Location = new System.Drawing.Point(28, 87);
+            this.panelTest.Name = "panelTest";
+            this.panelTest.Size = new System.Drawing.Size(725, 274);
+            this.panelTest.TabIndex = 3;
+            this.panelTest.Click += new System.EventHandler(this.PanelTest_Click);
+            this.panelTest.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTest_MouseDown);
             // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panelTest);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.labelMessage);
-            this.Controls.Add(this.buttonCompute);
+            this.Controls.Add(this.buttonNewMessage);
             this.Name = "TestForm";
             this.Text = "TestForm";
+            this.Load += new System.EventHandler(this.TestForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,8 +97,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonCompute;
+        private System.Windows.Forms.Button buttonNewMessage;
         private System.Windows.Forms.Label labelMessage;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Panel panelTest;
     }
 }

@@ -31,6 +31,9 @@
             this.buttonNewMessage = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.labelMessage = new System.Windows.Forms.Label();
+            this.panelTrial = new System.Windows.Forms.Panel();
+            this.buttonShow = new System.Windows.Forms.Button();
+            this.panelTrial.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonNewMessage
@@ -67,16 +70,42 @@
             this.labelMessage.TabIndex = 2;
             this.labelMessage.Text = "Žádné nové zprávy...";
             // 
+            // panelTrial
+            // 
+            this.panelTrial.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelTrial.Controls.Add(this.buttonShow);
+            this.panelTrial.Location = new System.Drawing.Point(38, 97);
+            this.panelTrial.Name = "panelTrial";
+            this.panelTrial.Size = new System.Drawing.Size(729, 250);
+            this.panelTrial.TabIndex = 3;
+            this.panelTrial.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTrial_MouseDown);
+            // 
+            // buttonShow
+            // 
+            this.buttonShow.BackColor = System.Drawing.Color.SandyBrown;
+            this.buttonShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonShow.Location = new System.Drawing.Point(557, 22);
+            this.buttonShow.Name = "buttonShow";
+            this.buttonShow.Size = new System.Drawing.Size(148, 59);
+            this.buttonShow.TabIndex = 0;
+            this.buttonShow.Text = "Zobrazit";
+            this.buttonShow.UseVisualStyleBackColor = false;
+            this.buttonShow.Click += new System.EventHandler(this.ButtonShow_Click);
+            // 
             // TrialForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panelTrial);
             this.Controls.Add(this.labelMessage);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonNewMessage);
             this.Name = "TrialForm";
             this.Text = "TrialForm";
+            this.Load += new System.EventHandler(this.TrialForm_Load);
+            this.Click += new System.EventHandler(this.TrialForm_Click);
+            this.panelTrial.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,5 +116,7 @@
         private System.Windows.Forms.Button buttonNewMessage;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Label labelMessage;
+        private System.Windows.Forms.Panel panelTrial;
+        private System.Windows.Forms.Button buttonShow;
     }
 }
