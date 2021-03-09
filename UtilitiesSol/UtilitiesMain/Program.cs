@@ -9,6 +9,7 @@ using UtilitiesMain.TextFileReading;
 using UtilitiesMain.TextFileWriting;
 using UtilitiesMain.ArrayCopying;
 using UtilitiesMain.CsvProcessing;
+using UtilitiesMain.Singleton;
 
 namespace UtilitiesMain
 {
@@ -34,7 +35,8 @@ namespace UtilitiesMain
 
             //ArrayCopier.Go();
 
-            CsvExample.Go();
+            //CsvExample.Go();
+            SingletonTest.Go();
 
 
             Console.ReadKey();
