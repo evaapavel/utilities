@@ -53,6 +53,10 @@
     <Compile Include="CsvProcessing\CsvExample.cs" />
     <Compile Include="CsvProcessing\CsvParser.cs" />
     <Compile Include="CsvProcessing\President.cs" />
+    <Compile Include="CustomEvents\CustomEventTest.cs" />
+    <Compile Include="CustomEvents\Fax.cs" />
+    <Compile Include="CustomEvents\MailManager.cs" />
+    <Compile Include="CustomEvents\Pager.cs" />
     <Compile Include="DataClasses\Book.cs" />
     <Compile Include="DataClasses\EBookshop.cs" />
     <Compile Include="DataClasses\Person.cs" />
