@@ -9,6 +9,8 @@ using UtilitiesMain.TextFileReading;
 using UtilitiesMain.TextFileWriting;
 using UtilitiesMain.ArrayCopying;
 using UtilitiesMain.CsvProcessing;
+using UtilitiesMain.Singleton;
+using UtilitiesMain.RegularExpressions;
 
 namespace UtilitiesMain
 {
@@ -34,8 +36,10 @@ namespace UtilitiesMain
 
             //ArrayCopier.Go();
 
-            CsvExample.Go();
+            //CsvExample.Go();
+            //SingletonTest.Go();
 
+            RegExTest.Go();
 
             Console.ReadKey();
 

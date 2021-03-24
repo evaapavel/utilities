@@ -59,6 +59,8 @@
     <Compile Include="DataClasses\Publisher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegularExpressions\PhoneNumberChecker.cs" />
+    <Compile Include="RegularExpressions\RegExTest.cs" />
     <Compile Include="Reports\DataLine.cs" />
     <Compile Include="Reports\InputFileProcessor.cs" />
     <Compile Include="Serialization\Anorak.cs" />
@@ -68,6 +70,11 @@
     <Compile Include="Serialization\Theme.cs" />
     <Compile Include="Serialization\Umbrella.cs" />
     <Compile Include="Serialization\UserPreferences.cs" />
+    <Compile Include="Singleton\ClientOne.cs" />
+    <Compile Include="Singleton\ClientTwo.cs" />
+    <Compile Include="Singleton\SelfCountingObject.cs" />
+    <Compile Include="Singleton\Single.cs" />
+    <Compile Include="Singleton\SingletonTest.cs" />
     <Compile Include="TextFileReading\StreamReaderExample.cs" />
     <Compile Include="TextFileWriting\StreamWriterExample.cs" />
   </ItemGroup>
