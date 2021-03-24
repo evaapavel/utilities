@@ -22,13 +22,13 @@ namespace UtilitiesDraw
 
         private void LogInfo(string info)
         {
-            string logFile = @"..\..\..\Resources\TestFormApp.log";
-            using (StreamWriter sw = new StreamWriter(logFile, true))
-            {
-                sw.WriteLine(info);
-            }
-            //using StreamWriter sw = new StreamWriter(logFile, true)
-            //// ...
+            //string logFile = @"..\..\..\Resources\TestFormApp_v02.log";
+            //using (StreamWriter sw = new StreamWriter(logFile, true))
+            //{
+            //    sw.WriteLine(info);
+            //}
+            ////using StreamWriter sw = new StreamWriter(logFile, true)
+            ////// ...
         }
 
         private void ButtonNewMessage_Click(object sender, EventArgs e)
@@ -78,5 +78,42 @@ namespace UtilitiesDraw
             string infoXY = $"X: {e.X}   Y: {e.Y}";
             LogInfo(infoXY);
         }
+
+        private void PanelTest_MouseMove(object sender, MouseEventArgs e)
+        {
+
+            //LogInfo("Method: PanelTest_MouseMove");
+
+            //LogInfo(sender.GetType().FullName);
+
+            //string infoXY = $"X: {e.X}   Y: {e.Y}";
+            //LogInfo(infoXY);
+
+        }
+
+        private void PanelTest_MouseUp(object sender, MouseEventArgs e)
+        {
+
+            LogInfo("Method: PanelTest_MouseUp");
+
+            LogInfo(sender.GetType().FullName);
+
+            string infoXY = $"X: {e.X}   Y: {e.Y}";
+            LogInfo(infoXY);
+        }
+
+
+
+        private void ButtonSaveFile_Click(object sender, EventArgs e)
+        {
+            string fileName = this.textBoxFileName.Text;
+            int selectedImageFormat = this.listBoxImageFormat.SelectedIndex;
+        }
+
+
+
     }
+
+
 }
+

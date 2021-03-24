@@ -33,6 +33,10 @@
             this.labelMessage = new System.Windows.Forms.Label();
             this.panelTrial = new System.Windows.Forms.Panel();
             this.buttonShow = new System.Windows.Forms.Button();
+            this.textBoxFileName = new System.Windows.Forms.TextBox();
+            this.labelFileName = new System.Windows.Forms.Label();
+            this.listBoxImageFormat = new System.Windows.Forms.ListBox();
+            this.labelImageFormat = new System.Windows.Forms.Label();
             this.panelTrial.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +44,7 @@
             // 
             this.buttonNewMessage.BackColor = System.Drawing.Color.YellowGreen;
             this.buttonNewMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonNewMessage.Location = new System.Drawing.Point(17, 388);
+            this.buttonNewMessage.Location = new System.Drawing.Point(17, 577);
             this.buttonNewMessage.Name = "buttonNewMessage";
             this.buttonNewMessage.Size = new System.Drawing.Size(168, 48);
             this.buttonNewMessage.TabIndex = 0;
@@ -52,7 +56,7 @@
             // 
             this.buttonClear.BackColor = System.Drawing.Color.LightCoral;
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonClear.Location = new System.Drawing.Point(620, 394);
+            this.buttonClear.Location = new System.Drawing.Point(620, 583);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(159, 41);
             this.buttonClear.TabIndex = 1;
@@ -74,11 +78,13 @@
             // 
             this.panelTrial.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelTrial.Controls.Add(this.buttonShow);
-            this.panelTrial.Location = new System.Drawing.Point(38, 97);
+            this.panelTrial.Location = new System.Drawing.Point(38, 286);
             this.panelTrial.Name = "panelTrial";
             this.panelTrial.Size = new System.Drawing.Size(729, 250);
             this.panelTrial.TabIndex = 3;
             this.panelTrial.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTrial_MouseDown);
+            this.panelTrial.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelTrial_MouseMove);
+            this.panelTrial.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelTrial_MouseUp);
             // 
             // buttonShow
             // 
@@ -92,11 +98,52 @@
             this.buttonShow.UseVisualStyleBackColor = false;
             this.buttonShow.Click += new System.EventHandler(this.ButtonShow_Click);
             // 
+            // textBoxFileName
+            // 
+            this.textBoxFileName.Location = new System.Drawing.Point(435, 43);
+            this.textBoxFileName.Name = "textBoxFileName";
+            this.textBoxFileName.Size = new System.Drawing.Size(295, 20);
+            this.textBoxFileName.TabIndex = 4;
+            // 
+            // labelFileName
+            // 
+            this.labelFileName.AutoSize = true;
+            this.labelFileName.Location = new System.Drawing.Point(435, 24);
+            this.labelFileName.Name = "labelFileName";
+            this.labelFileName.Size = new System.Drawing.Size(122, 13);
+            this.labelFileName.TabIndex = 5;
+            this.labelFileName.Text = "Zadejte cestu k souboru";
+            // 
+            // listBoxImageFormat
+            // 
+            this.listBoxImageFormat.FormattingEnabled = true;
+            this.listBoxImageFormat.Items.AddRange(new object[] {
+            "Vektorový formát",
+            "Bitmapový formát",
+            "Komprimovaný formát"});
+            this.listBoxImageFormat.Location = new System.Drawing.Point(438, 110);
+            this.listBoxImageFormat.Name = "listBoxImageFormat";
+            this.listBoxImageFormat.Size = new System.Drawing.Size(120, 95);
+            this.listBoxImageFormat.TabIndex = 6;
+            // 
+            // labelImageFormat
+            // 
+            this.labelImageFormat.AutoSize = true;
+            this.labelImageFormat.Location = new System.Drawing.Point(438, 91);
+            this.labelImageFormat.Name = "labelImageFormat";
+            this.labelImageFormat.Size = new System.Drawing.Size(148, 13);
+            this.labelImageFormat.TabIndex = 7;
+            this.labelImageFormat.Text = "Zvolte formát uložení obrázku";
+            // 
             // TrialForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 673);
+            this.Controls.Add(this.labelImageFormat);
+            this.Controls.Add(this.listBoxImageFormat);
+            this.Controls.Add(this.labelFileName);
+            this.Controls.Add(this.textBoxFileName);
             this.Controls.Add(this.panelTrial);
             this.Controls.Add(this.labelMessage);
             this.Controls.Add(this.buttonClear);
@@ -118,5 +165,9 @@
         private System.Windows.Forms.Label labelMessage;
         private System.Windows.Forms.Panel panelTrial;
         private System.Windows.Forms.Button buttonShow;
+        private System.Windows.Forms.TextBox textBoxFileName;
+        private System.Windows.Forms.Label labelFileName;
+        private System.Windows.Forms.ListBox listBoxImageFormat;
+        private System.Windows.Forms.Label labelImageFormat;
     }
 }
