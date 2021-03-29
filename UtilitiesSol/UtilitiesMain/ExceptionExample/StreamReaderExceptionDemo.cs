@@ -15,7 +15,12 @@ namespace UtilitiesMain.ExceptionExample
         {
             try
             {
-                using (StreamReader reader = new StreamReader(@"C:\MyDir\MyFile.txt"))
+                //string filePath = @"C:\MyDir\MyFile.txt";
+                //string filePath = @"C:\MyDirNonExisting\MyFile.txt";
+                string filePath = @"C:\MyDir\YourFile.txt";
+                //string filePath = null;
+                //string filePath = "";
+                using (StreamReader reader = new StreamReader(filePath))
                 {
                     while (!reader.EndOfStream)
                     {
@@ -32,14 +37,14 @@ namespace UtilitiesMain.ExceptionExample
             {
                 Console.WriteLine("Given path is an empty string.");
             }
-            catch (FileNotFoundException e3)
-            {
-                Console.WriteLine("The file cannot be found.");
-            }
-            catch (DirectoryNotFoundException e4)
-            {
-                Console.WriteLine("The specified path is invalid (unmapped drive).");
-            }
+            //catch (FileNotFoundException e3)
+            //{
+            //    Console.WriteLine("The file cannot be found.");
+            //}
+            //catch (DirectoryNotFoundException e4)
+            //{
+            //    Console.WriteLine("The specified path is invalid (unmapped drive).");
+            //}
             catch (IOException e5)
             {
                 Console.WriteLine("An input/output error occurs.");
