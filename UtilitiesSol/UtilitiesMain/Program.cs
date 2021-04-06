@@ -12,6 +12,8 @@ using UtilitiesMain.CsvProcessing;
 using UtilitiesMain.Singleton;
 using UtilitiesMain.RegularExpressions;
 
+using UtilitiesMain.CoroutinesAndYield;
+
 namespace UtilitiesMain
 {
     class Program
@@ -39,8 +41,13 @@ namespace UtilitiesMain
             //CsvExample.Go();
             //SingletonTest.Go();
 
-            RegExTest.Go();
+            //RegExTest.Go();
 
+            CoroutinesTest.Go();
+
+
+            Console.SetCursorPosition(0, 4);
+            Console.Write("Press any key to continue...");
             Console.ReadKey();
 
         }
