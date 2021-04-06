@@ -39,7 +39,47 @@ namespace UtilitiesMain
             //CsvExample.Go();
             //SingletonTest.Go();
 
-            RegExTest.Go();
+            //RegExTest.Go();
+
+            //int[] a = new int[4];
+            //a[0] = 10;
+            //a[1] = 1;
+            //a[2] = -3;
+            //a[3] = 0;
+            //foreach (int x in a)
+            //{
+            //    Console.WriteLine(x);
+            //}
+
+
+            Dictionary<string, string> phones = new Dictionary<string, string>();
+            phones["John Smith"] = "521-8976";
+            phones["Lisa Smith"] = "521-1234";
+            phones["Sandra Dee"] = "521-9655";
+
+            phones.Add("Jan Novak", "111-434");
+            //phones.Add("Jan Novak", "33340-444");
+            phones["Jan Novak"] = "33340-444";
+
+            Console.WriteLine(phones["John Smith"]);
+            Console.WriteLine(phones["Lisa Smith"]);
+            Console.WriteLine(phones["Sandra Dee"]);
+            Console.WriteLine(phones["Jan Novak"]);
+
+            Console.WriteLine(phones["Madonna"]);
+
+            Console.WriteLine(phones.Count);
+
+            //foreach (KeyValuePair<string, string> p in phones)
+            //{
+            //    Console.WriteLine($"{p.Key}  {p.Value}");
+            //}
+
+
+            //foreach (string name in phones.Keys)
+            //{
+            //    Console.WriteLine($"{name}  {phones[name]}");
+            //}
 
             Console.ReadKey();
 
