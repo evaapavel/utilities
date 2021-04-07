@@ -12,6 +12,8 @@ using UtilitiesMain.CsvProcessing;
 using UtilitiesMain.Singleton;
 using UtilitiesMain.RegularExpressions;
 
+//using UtilitiesMain.GenericClasses;
+
 namespace UtilitiesMain
 {
     class Program
@@ -39,7 +41,10 @@ namespace UtilitiesMain
             //CsvExample.Go();
             //SingletonTest.Go();
 
-            RegExTest.Go();
+            //RegExTest.Go();
+
+            //GenericsTest.Go();
+            UtilitiesMain.GenericClasses.GenericsTest.Go();
 
             Console.ReadKey();
 
