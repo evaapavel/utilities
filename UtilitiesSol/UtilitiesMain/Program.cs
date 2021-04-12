@@ -39,7 +39,9 @@ namespace UtilitiesMain
             //CsvExample.Go();
             //SingletonTest.Go();
 
-            RegExTest.Go();
+            //RegExTest.Go();
+
+            UtilitiesMain.LambdaExpressions.LambdaTest.Go();
 
             Console.ReadKey();
 
