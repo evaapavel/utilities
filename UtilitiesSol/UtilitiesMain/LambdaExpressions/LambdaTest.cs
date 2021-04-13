@@ -18,7 +18,10 @@ namespace UtilitiesMain.LambdaExpressions
             //Functions.TestFunc();
             //StringFunctions.TestFunc();
             //StringFunctions.TestEncrypting();
-            DelegateExample.TestEncrypting();
+            //DelegateExample.TestEncrypting();
+            //DelegatesAndFunctions.TestFunctions();
+            DelegatesAndFunctions.TestDelegates();
+            //DelegatesAndFunctions.TestLambdas();
 
             //Console.WriteLine("Hello, my darling!".ToUpperAndLowerAlternately());
             //Console.WriteLine("Eyjafjallajökull".ToUpperAndLowerAlternately());

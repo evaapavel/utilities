@@ -59,6 +59,7 @@
     <Compile Include="DataClasses\Publisher.cs" />
     <Compile Include="LambdaExpressions\CodeShiftDelegate.cs" />
     <Compile Include="LambdaExpressions\DelegateExample.cs" />
+    <Compile Include="LambdaExpressions\DelegatesAndFunctions.cs" />
     <Compile Include="LambdaExpressions\Functions.cs" />
     <Compile Include="LambdaExpressions\InstanceAndStatic.cs" />
     <Compile Include="LambdaExpressions\LambdaTest.cs" />
