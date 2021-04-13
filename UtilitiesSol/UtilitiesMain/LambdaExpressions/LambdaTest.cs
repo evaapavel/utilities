@@ -15,11 +15,16 @@ namespace UtilitiesMain.LambdaExpressions
             //string result = instanceAndStatic.InstanceMethod(true);
             //Console.WriteLine(result);
 
-            Functions.TestFunc();
+            //Functions.TestFunc();
+            //StringFunctions.TestFunc();
+            //StringFunctions.TestEncrypting();
+            DelegateExample.TestEncrypting();
 
-            Console.WriteLine("Hello, my darling!".ToUpperAndLowerAlternately());
-            Console.WriteLine("Eyjafjallajökull".ToUpperAndLowerAlternately());
+            //Console.WriteLine("Hello, my darling!".ToUpperAndLowerAlternately());
+            //Console.WriteLine("Eyjafjallajökull".ToUpperAndLowerAlternately());
         }
+
+
 
     }
 }
