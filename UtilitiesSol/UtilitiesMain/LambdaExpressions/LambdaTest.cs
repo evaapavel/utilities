@@ -25,9 +25,14 @@ namespace UtilitiesMain.LambdaExpressions
             //instanceAndStatic.ReturnNothing(5, 6);
 
             //string r = StringExtensions.ConcatAndToUpper("Ahoj ", "Jane ", "Nováku!");
-            string ahoj = "Ahoj ";
-            string r = ahoj.ConcatAndToUpper("Jane ", "Nováku!");
-            Console.WriteLine(r);
+            //string ahoj = "Ahoj ";
+            //string r = ahoj.ConcatAndToUpper("Jane ", "Nováku!");
+            //Console.WriteLine(r);
+
+            //Functions.TestFunc();
+            StringFunctions.TestFunc();
+
+
         }
 
 
