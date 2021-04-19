@@ -57,6 +57,9 @@
     <Compile Include="DataClasses\EBookshop.cs" />
     <Compile Include="DataClasses\Person.cs" />
     <Compile Include="DataClasses\Publisher.cs" />
+    <Compile Include="LambdaExpressions\CodeShiftDelegate.cs" />
+    <Compile Include="LambdaExpressions\DelegateExample.cs" />
+    <Compile Include="LambdaExpressions\DelegatesAndFunctions.cs" />
     <Compile Include="LambdaExpressions\Functions.cs" />
     <Compile Include="LambdaExpressions\Helper.cs" />
     <Compile Include="LambdaExpressions\InstanceAndStatic.cs" />

@@ -30,8 +30,8 @@ namespace UtilitiesMain.LambdaExpressions
             //Console.WriteLine(r);
 
             //Functions.TestFunc();
-            StringFunctions.TestFunc();
-
+            //StringFunctions.TestFunc();
+            DelegateExample.TestEncrypting();
 
         }
 
