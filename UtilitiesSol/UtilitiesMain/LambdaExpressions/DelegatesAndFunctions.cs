@@ -232,7 +232,88 @@ namespace UtilitiesMain.LambdaExpressions
 
 
 
-    }
+
+
+
+        public delegate int GetNumber();
+
+
+        public static int ReturnNumber()
+        {
+            return 5;
+        }
+
+
+        public static int RandomNumber()
+        {
+            //Random r = new Random();
+            //int i = (new Random()).Next(10);
+            return (new Random()).Next(10);
+        }
+
+
+        public delegate int ProcessNumbersDelegate(params int[] numbers);
+
+
+        public static void TestComplexDelegate(ProcessNumbersDelegate method, params int[] integers)
+        //public static void TestComplexDelegate(ProcessNumbersDelegate method, int[] integers)
+        {
+            int i = method(integers);
+            Console.WriteLine(i);
+        }
+
+
+        public static void GoComplexDelegate()
+        {
+            //TestComplexDelegate(
+            //    numbers => 
+            //    {
+            //        int sum = 0;
+            //        for (int i = 0; i < numbers.Length; i++)
+            //        {
+            //            sum += numbers[i];
+            //        }
+            //        return sum;
+            //    },
+            // 10, 20, 30);
+            ProcessNumbersDelegate myDelegate = numbers =>
+            {
+                int sum = 0;
+                for (int i = 0; i < numbers.Length; i++)
+                {
+                    sum += numbers[i];
+                }
+                return sum;
+            };
+            TestComplexDelegate(myDelegate, 10, 20, 30);
+            //TestComplexDelegate(myDelegate, new[] { 10, 20, 30 });
+        }
+
+
+
+        //(iNum1, iNum2, iNum3) =>
+        //{
+        //  return iNum1 + iNum2 + iNum3;
+        //}
+
+
+        public static int ProcessThreeNumbers(int iNum1, int iNum2, int iNum3)
+        {
+            int sum = iNum1 + iNum2 + iNum3;
+            return sum;
+        }
+
+
+
+        //public static void SendMail(string sFrom, string sTo, string sSubject)
+        //{
+        //    Mail.Send(sFrom, sTo, sSubject);
+        //}
+
+
+
+
+}
 
 
 

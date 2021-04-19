@@ -20,8 +20,9 @@ namespace UtilitiesMain.LambdaExpressions
             //StringFunctions.TestEncrypting();
             //DelegateExample.TestEncrypting();
             //DelegatesAndFunctions.TestFunctions();
-            DelegatesAndFunctions.TestDelegates();
+            //DelegatesAndFunctions.TestDelegates();
             //DelegatesAndFunctions.TestLambdas();
+            DelegatesAndFunctions.GoComplexDelegate();
 
             //Console.WriteLine("Hello, my darling!".ToUpperAndLowerAlternately());
             //Console.WriteLine("Eyjafjallajökull".ToUpperAndLowerAlternately());
