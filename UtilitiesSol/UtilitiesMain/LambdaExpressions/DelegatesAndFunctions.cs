@@ -47,7 +47,32 @@ namespace UtilitiesMain.LambdaExpressions
 
 
 
+        //public static void SendMail(string from, string to, string subject)
+        //{
+        //    Mail.Send(from, to, subject);
+        //}
 
+
+
+        public static int Count(int iCount)
+        {
+            //iCount = iCount + 1;
+            //return iCount;
+            return iCount + 1;
+        }
+
+
+
+        public delegate string Hello(string sName);
+
+
+        public delegate string ConcatDelegate(int times, string word);
+
+
+        public delegate DateTime DateNow();
+
+
+        public delegate DateTime dateTimeNow();
 
 
 
